@@ -48,6 +48,9 @@ function check(submit, puzzle) {
         }
     }
     else if (answers[puzzle] == hash(cleaned)) {
+        if(puzzle == "mjm"){
+            window.location.href="../victory.html";
+        }
         document.getElementById("solved").hidden = false;
         document.getElementById("unsolved").hidden = true;
         document.getElementById("id_answer").value = "";
