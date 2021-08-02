@@ -27,7 +27,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700&amp;display=swap" rel="stylesheet">
     <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon.ico" type="image/vnd.microsoft.icon">
-    
+	<script defer src="../static/js/post-hunt-checker.js"></script>    
     
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-199838108-1"></script>
@@ -65,13 +65,17 @@
 <h1>Check your answer for Six of Crows</h1>
 
 <main>
-    
 
-    
+    <div class="solved-panel" id="solved" hidden>
+        <h4>Solved!</h4>
+        <p>The answer was <b id="solve-answer"></b>.</p>
+    </div>
+    <div class="unsolved-panel" id="unsolved" hidden>
+        <h4>Incorrect!</h4>
+    </div>
 
-    <form class="call-in-answer-panel">
         
-        <div class="row">
+        <div class="row" id="guess">
             <div class="four columns">
                 <label for="id_answer">Enter your guess:</label>
             </div>
@@ -80,11 +84,10 @@
                 
             </div>
             <div class="four columns">
-                <button class="btn" type="submit">Submit</button>
+                <button class="btn" type="submit" onclick="check(document.getElementById('id_answer').value, 'soc')" id="submit-btn">Submit</button>
             </div>
         </div>
-        
-    </form>
+
 </main>
 
 
