@@ -1,0 +1,154 @@
+
+
+
+
+<!doctype html>
+<html>
+
+<!-- Mirrored from www.hunt20.com/solution/jurassic-mark by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Aug 2021 01:19:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    
+<title>Solution: META: Jurassic Mark</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="../cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="../cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="../cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700&amp;display=swap" rel="stylesheet">
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-199838108-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-199838108-1');
+</script>
+
+</head>
+<body>
+<nav><span class="tray"><div class="top-tabs"><a href="../index.html">
+                    Home
+                </a><a href="../rules.html">
+                    Rules
+                </a><a href="../story.html">
+                    Story
+                </a><a class="selected-tab" href="../puzzles.html">
+                    Puzzles
+                </a><a href="../teams.html">
+                    Teams
+                </a><a href="../faq.html">
+                    FAQ
+                </a><a href="../errata.html">
+                    Updates
+                </a><a href="../wrapup.html">
+                    Wrap-Up
+                </a></div><div class="top-left-actions"><a href="../puzzle/jurassic-mark.html" class="btn">Back to the puzzle</a></div></span><div class="top-right-actions"></div></nav>
+    
+    <div class="content">
+        
+
+<style>
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 24px;
+}
+
+.answers-used {
+    column-width: 350px;
+    white-space: pre;
+    font-family: monospace, monospace;
+}
+</style>
+
+<h1>
+    
+    Solution: META: Jurassic Mark
+    <div class="solved-title-marker">Answer: <span class="solved-title-answer">DEWEYDECIMATETHEASTEROID</span></div>
+    
+</h1>
+
+<main>
+    <h4>
+        Written by
+        
+Ethan
+
+    </h4>
+
+    
+    <p>First, solve the nonogram. Thematically, it takes the shape of a dinosaur with an asteroid in the background.
+<img src="nonogram.png" width="400px" style="display:block;margin:auto;"><br><br>
+"The End" section can also be solved. Each line is the definition of a dinosaur name, which matches with the number of blanks in each slot. From each dinosaur, extract the letters at the specified positions. 
+These letters serve as positions for the "end" dots in the grid. Putting the dots in the appropriate places gives the following.
+<img src="grid-dots-solve.png" width="400px" style="display:block;margin:auto"><br><br>
+We can now "connect the dots", similar to a Numberlink or the mobile game 'Flow'. 
+<img src="grid-lines-solve.png" width="400px" style="display:block;margin:auto"><br><br>
+Each connecting line is a unique number of spaces long, ranging from 5-13. Also, each contributing puzzles' answer uniquely ranges from 5-13 letters. 
+We can fit each answer onto the line that has the same length, starting at the dots originally given and ending at the dots we added ("the end").
+Overlaying the nonogram again, extract the letters that were in the same position as the solved nonogram, giving how to stop the asteroid: <b>DEWEY DECIMATE THE ASTEROID</b>.
+<br><br>
+Upon submissions, teams were redirected to the <a href="../victory.html" class="link">victory page</a>.
+<img src="grid-letters-solve.png" width="400px" style="display:block;margin:auto"></p>
+
+    
+
+    
+    <hr>
+    <h4>Author&rsquo;s Notes</h4>
+    <p>I intended the title of 'mark' to be a pun on Jurassic Park, a reference to crayon marks, as well
+as 'mark'ing the grid with connections/nonogram. This might have 
+gone over a couple people's heads, but hopefully it was not misleading to any
+solvers. For getting the positions, perhaps it could have been a little more creative as just getting the letters
+from certain spaces can be a little boring, especially for a meta concept.
+<br><br>
+As for construction, I started out with the answer; DEWEY DECIMATE was a pretty good pun 
+that we were happy to include. 
+Next came the flow/numberlink. To have an unambiguous extraction,
+I decided on the most elegant approach I could think of at the time - increasing number of 
+lengths for connections. This determined the grid size, a 9x9. I created a sample 
+puzzle that would have this property, though I knew that this would change after creating
+the nonogram. 
+After that, I created the nonogram - and I found out 
+that not all nonograms actually have unique solutions, which I found interesting. 
+I confirmed this nonogram's uniqueness by putting it into a nonogram solver as well as manually
+going through the logic to fill the grid. 
+After filling the nonogram with the desired letters, my original connections didn't distribute the needed
+letters equally. With some adjustments, I was able to create paths that would create reasonable
+feeder answeres. 
+<br><br>
+Though I wish this meta was a little more creative further than "use certain letters from feeder answers," 
+hopefully the constraints still led it to be satisfying to solve. I'm also happy with the little "the end"
+clue I was able to sneak in. Unfortunately,
+the construction led to some green paint feeder answers.</p>
+    
+
+    
+
+    
+      
+</main>
+
+
+    </div>
+    
+</body>
+
+<!-- Mirrored from www.hunt20.com/solution/jurassic-mark by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Aug 2021 01:19:05 GMT -->
+</html>

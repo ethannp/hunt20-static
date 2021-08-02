@@ -1,0 +1,591 @@
+
+
+
+
+<!doctype html>
+<html>
+
+<!-- Mirrored from www.hunt20.com/stats by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Aug 2021 01:19:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    
+    <title>Hunt20 2.1 Puzzle Hunt</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <link rel="stylesheet" href="cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="static/css/skeleton.css">
+    <link rel="stylesheet" href="static/css/base.css">
+    <script src="cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="static/js/sorttable.js"></script>
+    <script src="static/js/tray.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700&amp;display=swap" rel="stylesheet">
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-199838108-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-199838108-1');
+</script>
+
+</head>
+<body>
+<nav><span class="tray"><div class="top-tabs"><a href="index.html">
+                    Home
+                </a><a href="rules.html">
+                    Rules
+                </a><a href="story.html">
+                    Story
+                </a><a class="selected-tab" href="puzzles.html">
+                    Puzzles
+                </a><a href="teams.html">
+                    Teams
+                </a><a href="faq.html">
+                    FAQ
+                </a><a href="errata.html">
+                    Updates
+                </a><a href="wrapup.html">
+                    Wrap-Up
+                </a></div><div class="top-left-actions"><a href="wrapup.html" class="btn">Back to wrap-up</a></div></span><div class="top-right-actions"></div></nav>
+    
+    <div class="content">
+        
+
+<style>
+.meta {
+    font-style: italic;
+}
+body{
+    max-width:1200px;
+}
+.gph-list-table th,
+.gph-list-table td{
+    word-break: keep-all;
+    overflow-wrap: normal;
+}
+</style>
+
+<h1>Hunt Stats</h1>
+
+<main>
+    <div class="row puzzle-stats-panel">
+        <div class="row">
+            <div class="six columns">
+                <div class="stat-entry">Total guesses: <span class="stat-value">8221</span></div>
+            </div>
+            <div class="six columns">
+                <div class="stat-entry">Total solves: <span class="stat-value">4365</span></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="six columns">
+                <div class="stat-entry">Total participants: <span class="stat-value">754</span></div>
+            </div>
+            <div class="six columns">
+                <div class="stat-entry">Total teams: <span class="stat-value">368</span></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="six columns">
+                <div class="stat-entry">Hints asked: <span class="stat-value">525</span></div>
+            </div>
+            <div class="six columns">
+                <div class="stat-entry">Metas solved: <span class="stat-value">436</span></div>
+            </div>
+        </div>
+    </div>
+    <table class="sortable gph-list-table">
+        <tr>
+            <th style="background-color:white;">Puzzle</th>
+            <th style="background-color:white;" title="Total number of correct answers">Solves</th>
+            <th style="background-color:white;" title="Total number of answer attempts">Guesses</th>
+            <th style="background-color:white;" title="Total number of hints requested">Hints</th>
+            <th style="background-color:white;" title="Total number of non-backsolves">Forward solves</th>
+            <th style="background-color:white;" title="Forward solve after using no hints on this puzzle">0&#8288;-&#8288;hint forward</th>
+            <th style="background-color:white;" title="Forward solve after using one hint on this puzzle">1&#8288;-&#8288;hint forward</th>
+            <th style="background-color:white;" title="Forward solve after using multiple hints on this puzzle">2&#8288;+&#8288;-&#8288;hint forward</th>
+            <th style="background-color:white;" title="Solved after the round meta or within five minutes of it">Back solves</th>
+            <th style="background-color:white;" title="Made at least one guess but none were correct">No solve</th>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="1" ><a href="stats/harry-potter.html">Harry Potter</a></td>
+            
+            <td >302</td>
+            
+            <td >368</td>
+            
+            <td >12</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(296 / 302 / 2));">296</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(287 / 302 / 2));">287</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(9 / 302 / 2));">9</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(0 / 302 / 2));">0</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(6 / 302 / 2));">6</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(5 / 302 / 2));">5</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="2" ><a href="stats/maze-runner.html">The Maze Runner</a></td>
+            
+            <td >295</td>
+            
+            <td >442</td>
+            
+            <td >11</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(278 / 295 / 2));">278</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(267 / 295 / 2));">267</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(11 / 295 / 2));">11</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(0 / 295 / 2));">0</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(17 / 295 / 2));">17</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(5 / 295 / 2));">5</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="3" ><a href="stats/lord-of-the-rings.html">Lord of the Rings</a></td>
+            
+            <td >302</td>
+            
+            <td >398</td>
+            
+            <td >3</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(289 / 302 / 2));">289</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(287 / 302 / 2));">287</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(2 / 302 / 2));">2</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(0 / 302 / 2));">0</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(13 / 302 / 2));">13</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(3 / 302 / 2));">3</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="4" ><a href="stats/number-four.html">I am Number Four</a></td>
+            
+            <td >196</td>
+            
+            <td >540</td>
+            
+            <td >43</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(139 / 196 / 2));">139</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(115 / 196 / 2));">115</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(24 / 196 / 2));">24</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(0 / 196 / 2));">0</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(57 / 196 / 2));">57</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(26 / 196 / 2));">26</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="5" ><a href="stats/treasure-island.html">Treasure Island</a></td>
+            
+            <td >298</td>
+            
+            <td >348</td>
+            
+            <td >2</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(291 / 298 / 2));">291</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(289 / 298 / 2));">289</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(2 / 298 / 2));">2</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(0 / 298 / 2));">0</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(7 / 298 / 2));">7</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(0 / 298 / 2));">0</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="6" ><a href="stats/miss-peregrine.html">Miss Peregrine&#x27;s Home for Peculiar Children</a></td>
+            
+            <td >196</td>
+            
+            <td >336</td>
+            
+            <td >18</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(143 / 196 / 2));">143</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(138 / 196 / 2));">138</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(5 / 196 / 2));">5</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(0 / 196 / 2));">0</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(53 / 196 / 2));">53</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(19 / 196 / 2));">19</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="7" ><a href="stats/six-of-crows.html">Six of Crows</a></td>
+            
+            <td >241</td>
+            
+            <td >325</td>
+            
+            <td >11</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(210 / 241 / 2));">210</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(204 / 241 / 2));">204</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(6 / 241 / 2));">6</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(0 / 241 / 2));">0</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(31 / 241 / 2));">31</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(4 / 241 / 2));">4</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="8" ><a href="stats/hunger-games.html">The Hunger Games</a></td>
+            
+            <td >212</td>
+            
+            <td >859</td>
+            
+            <td >46</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(132 / 212 / 2));">132</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(107 / 212 / 2));">107</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(22 / 212 / 2));">22</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(3 / 212 / 2));">3</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(80 / 212 / 2));">80</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(37 / 212 / 2));">37</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="9" ><a href="stats/divergent.html">Divergent</a></td>
+            
+            <td >204</td>
+            
+            <td >325</td>
+            
+            <td >21</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(137 / 204 / 2));">137</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(127 / 204 / 2));">127</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(10 / 204 / 2));">10</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(0 / 204 / 2));">0</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(67 / 204 / 2));">67</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(9 / 204 / 2));">9</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="10" class="meta"><a href="stats/percy-jackson.html">META: Percy Jackson</a></td>
+            
+            <td >255</td>
+            
+            <td >361</td>
+            
+            <td >4</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(255 / 255 / 2));">255</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(251 / 255 / 2));">251</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(4 / 255 / 2));">4</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(0 / 255 / 2));">0</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(0 / 255 / 2));">0</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(1 / 255 / 2));">1</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="11" ><a href="stats/matilda.html">Matilda</a></td>
+            
+            <td >217</td>
+            
+            <td >692</td>
+            
+            <td >38</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(211 / 217 / 2));">211</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(177 / 217 / 2));">177</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(31 / 217 / 2));">31</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(3 / 217 / 2));">3</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(6 / 217 / 2));">6</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(0 / 217 / 2));">0</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="12" ><a href="stats/hungry-caterpillar.html">The Very Hungry Caterpillar</a></td>
+            
+            <td >221</td>
+            
+            <td >293</td>
+            
+            <td >20</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(216 / 221 / 2));">216</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(200 / 221 / 2));">200</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(16 / 221 / 2));">16</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(0 / 221 / 2));">0</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(5 / 221 / 2));">5</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(3 / 221 / 2));">3</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="13" ><a href="stats/the-lorax.html">The Lorax</a></td>
+            
+            <td >185</td>
+            
+            <td >239</td>
+            
+            <td >50</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(152 / 185 / 2));">152</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(113 / 185 / 2));">113</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(37 / 185 / 2));">37</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(2 / 185 / 2));">2</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(33 / 185 / 2));">33</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(3 / 185 / 2));">3</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="14" ><a href="stats/i-spy.html">I Spy</a></td>
+            
+            <td >161</td>
+            
+            <td >315</td>
+            
+            <td >62</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(135 / 161 / 2));">135</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(95 / 161 / 2));">95</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(36 / 161 / 2));">36</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(4 / 161 / 2));">4</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(26 / 161 / 2));">26</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(10 / 161 / 2));">10</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="15" ><a href="stats/frog-and-toad.html">Frog and Toad</a></td>
+            
+            <td >193</td>
+            
+            <td >424</td>
+            
+            <td >29</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(190 / 193 / 2));">190</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(167 / 193 / 2));">167</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(21 / 193 / 2));">21</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(2 / 193 / 2));">2</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(3 / 193 / 2));">3</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(13 / 193 / 2));">13</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="16" ><a href="stats/giving-tree.html">The Giving Tree</a></td>
+            
+            <td >178</td>
+            
+            <td >521</td>
+            
+            <td >52</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(153 / 178 / 2));">153</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(114 / 178 / 2));">114</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(39 / 178 / 2));">39</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(0 / 178 / 2));">0</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(25 / 178 / 2));">25</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(13 / 178 / 2));">13</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="17" ><a href="stats/three-little-pigs.html">The Three Little Pigs</a></td>
+            
+            <td >184</td>
+            
+            <td >302</td>
+            
+            <td >6</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(176 / 184 / 2));">176</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(171 / 184 / 2));">171</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(5 / 184 / 2));">5</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(0 / 184 / 2));">0</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(8 / 184 / 2));">8</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(2 / 184 / 2));">2</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="18" ><a href="stats/ugly-duckling.html">The Ugly Duckling</a></td>
+            
+            <td >166</td>
+            
+            <td >488</td>
+            
+            <td >53</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(121 / 166 / 2));">121</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(92 / 166 / 2));">92</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(29 / 166 / 2));">29</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(0 / 166 / 2));">0</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(45 / 166 / 2));">45</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(12 / 166 / 2));">12</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="19" ><a href="stats/where-the-wild-things-are.html">Where the Wild Things Are</a></td>
+            
+            <td >178</td>
+            
+            <td >296</td>
+            
+            <td >20</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(156 / 178 / 2));">156</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(140 / 178 / 2));">140</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(15 / 178 / 2));">15</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(1 / 178 / 2));">1</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(22 / 178 / 2));">22</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(5 / 178 / 2));">5</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="20" class="meta"><a href="stats/jurassic-mark.html">META: Jurassic Mark</a></td>
+            
+            <td >181</td>
+            
+            <td >349</td>
+            
+            <td >24</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(181 / 181 / 2));">181</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(159 / 181 / 2));">159</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(21 / 181 / 2));">21</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(1 / 181 / 2));">1</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(0 / 181 / 2));">0</td>
+            
+            <td style="background-color: rgba(255, 255, 255, calc(2 / 181 / 2));">2</td>
+            
+        </tr>
+        
+    </table>
+</main>
+
+
+    </div>
+    
+</body>
+
+<!-- Mirrored from www.hunt20.com/stats by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Aug 2021 01:19:12 GMT -->
+</html>

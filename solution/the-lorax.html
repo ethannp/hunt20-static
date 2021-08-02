@@ -1,0 +1,137 @@
+
+
+
+
+<!doctype html>
+<html>
+
+<!-- Mirrored from www.hunt20.com/solution/the-lorax by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Aug 2021 01:19:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    
+<title>Solution: The Lorax</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <script src="../cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="../cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="../cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700&amp;display=swap" rel="stylesheet">
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-199838108-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-199838108-1');
+</script>
+
+</head>
+<body>
+<nav><span class="tray"><div class="top-tabs"><a href="../index.html">
+                    Home
+                </a><a href="../rules.html">
+                    Rules
+                </a><a href="../story.html">
+                    Story
+                </a><a class="selected-tab" href="../puzzles.html">
+                    Puzzles
+                </a><a href="../teams.html">
+                    Teams
+                </a><a href="../faq.html">
+                    FAQ
+                </a><a href="../errata.html">
+                    Updates
+                </a><a href="../wrapup.html">
+                    Wrap-Up
+                </a></div><div class="top-left-actions"><a href="../puzzle/the-lorax.html" class="btn">Back to the puzzle</a></div></span><div class="top-right-actions"></div></nav>
+    
+    <div class="content">
+        
+
+<style>
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 24px;
+}
+
+.answers-used {
+    column-width: 350px;
+    white-space: pre;
+    font-family: monospace, monospace;
+}
+</style>
+
+<h1>
+    
+    Solution: The Lorax
+    <div class="solved-title-marker">Answer: <span class="solved-title-answer">SEEDS</span></div>
+    
+</h1>
+
+<main>
+    <h4>
+        Written by
+        
+Ethan
+
+    </h4>
+
+    
+    <p>By "Mastermind" in the title, it should be clear that each of the 4 forests represents a mastermind puzzle, with the
+5 letter words across being the guesses. However, this does not seem to be a normal mastermind, 
+as while letters in the same column are always the same color (Y's in "Useful"), the same letter may be colored
+differently depending on what column it is (ex T in "Vehicle" is colored white in col 1, yellow in col 3, and blue in col 5).
+This indicates that position is not important to the mastermind. 
+<br><br>Next, the abundance of blue tiles hints that they are the "incorrect" color. Perhaps the easiest break-in 
+is in "Vehicle", where the white letters spell TR??K, which is TRUCK, a vehicle. 
+Trying this same process with other colored letters doesn't yield anything substantial. 
+We then try to see how these letters in TRUCK could have
+been formed by the other colorings. By the hint of "shifted once" in the title, we can see that the yellow letters indicate
+that a letter has been caesar shifted -1, or the letter before, while the pink letters indicate that a letter has been
+caesar shifted +1, or the letter after. In "Vehicle", in column 1, the S (in yellow) is one letter before T. In column 4, D 
+is one letter after C. This mechanic can be applied to the rest of the 4 forests to get AFTER (a time relation), 
+NIFTY (meaning useful), RIVER (a body of water), and TRUCK (a vehicle). 
+<br><br>Repeat this process one more time by placing these 4 words in the tufts of thet trees, creating a "meta" mastermind, to get <b>SEEDS</b>, how to save the Truffula trees.</p>
+
+    
+
+    
+    <hr>
+    <h4>Author&rsquo;s Notes</h4>
+    <p>Almost all of the puzzle is just figuring out the mechanic. There's pretty much no "grind" stage - once you get what's happening, 
+the puzzle is essentially solved. It's certainly a different style than some of the other puzzles in this hunt (cough, Where the Wild Things Are), but 
+not a bad thing, in my opinion.
+<br><br>
+The abundance of white letters helps confirm you're on the right track, but unless you actually understand the shifting mechanic, you're not
+solving the puzzle as there are no white spaces in the tops of the trees.</p>
+    
+
+    
+
+    
+      
+</main>
+
+
+    </div>
+    
+</body>
+
+<!-- Mirrored from www.hunt20.com/solution/the-lorax by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Aug 2021 01:19:04 GMT -->
+</html>
