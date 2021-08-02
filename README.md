@@ -1,7 +1,7 @@
 ## Static mirror of hunt20
 
 This was created using [HTTrack](https://www.httrack.com/). After the hunt ended, I changed `urls.py` so urlpatterns included the `robots.txt` path. Additionally,
-I allowed all sites to be crawled by changing one line robots.txt to be crawled by changing one line in `views.py` to `response.write('User-agent: *\nAllow: /\n')`.
+I allowed all sites to be crawled by changing one line in the robots.txt request in `views.py` to `response.write('User-agent: *\nAllow: /\n')`.
 
 To connect a custom domain, see [this article](https://hossainkhan.medium.com/using-custom-domain-for-github-pages-86b303d3918a) (I used Google Domains).
 
