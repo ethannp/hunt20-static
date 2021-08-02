@@ -1,0 +1,1569 @@
+
+
+
+
+<!doctype html>
+<html>
+
+<!-- Mirrored from www.hunt20.com/wrapup by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Aug 2021 01:18:28 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    
+    <title>Hunt20 2.1 Puzzle Hunt</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="static/css/skeleton.css">
+    <link rel="stylesheet" href="static/css/base.css">
+    <script src="../cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="../cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="../cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="static/js/sorttable.js"></script>
+    <script src="static/js/tray.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700&amp;display=swap" rel="stylesheet">
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-199838108-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-199838108-1');
+</script>
+
+</head>
+<body>
+<nav><span class="tray"><div class="top-tabs"><a href="index.html">
+                    Home
+                </a><a href="rules.html">
+                    Rules
+                </a><a href="story.html">
+                    Story
+                </a><a href="puzzles.html">
+                    Puzzles
+                </a><a href="teams.html">
+                    Teams
+                </a><a href="faq.html">
+                    FAQ
+                </a><a href="errata.html">
+                    Updates
+                </a><a class="selected-tab" href="wrapup.html">
+                    Wrap-Up
+                </a></div><div class="top-left-actions"><a href="wrapup/finishers.html" class="btn">Finishers</a><a href="bigboard.html" class="btn">Bigboard</a><a href="stats.html" class="btn">Stats</a></div></span><div class="top-right-actions"></div></nav>
+    
+    <div class="content">
+        
+
+<h1 id="top">Wrap-Up</h1>
+<script src="../cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script src="../cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+
+<main>
+    <style>
+        #toc_container {
+            font-size: 90%;
+            line-height: 1.8em;
+            padding: 10px 20px 10px 0px;
+            float: left;
+            height: 80%;
+            width: 14%;
+            overflow: auto;
+            position: fixed;
+            top: 12%;
+            left: 2%;
+            display: block;
+            overflow-y: auto;
+        }
+
+        #toc_container li,
+        #toc_container ul,
+        #toc_container ul li {
+            list-style: outside none none !important;
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+
+        #toc_container li{
+           margin-left:0px;
+           line-height:2.6rem;
+        }
+
+        body {
+            width: 70%;
+            max-width: 1100px;
+            padding-left:70px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 1rem;
+        }
+
+        :target {
+           background-color: #edf6ff;
+           -webkit-transition: all 1s linear;
+        }
+        #totop{
+           visibility:hidden;
+        }
+
+        @media only screen and (max-width: 900px) {
+           html{
+              scroll-padding-top: 6rem;
+           }
+            body {
+                width:95%;
+                padding:0;
+            }
+            #toc_container {
+                position:relative;
+                width: 100%;
+            }
+            #totop {
+               z-index:100;
+               visibility:visible;
+               position:fixed;
+               padding:0;
+               margin:0;
+               background-color: rgba(60, 153, 220, 0.8);
+               border: none;
+               border-radius: 100px;
+               cursor: pointer;
+               font-size: 40px;
+               line-height: 90px;
+               width: 90px;
+               height:90px;
+               bottom:4rem;
+               right:4rem;
+               -webkit-transition: all 0.1s linear;
+            }
+            #totop:hover{
+               background-color: rgba(110, 194, 255, 0.8);
+               -webkit-transition: all 0.1s linear;
+            }
+        }
+    </style>
+    <div id="toc_container">
+        <p style="font-weight:700px;text-align:center;margin-bottom:0;"><b><a class="link-no"
+                    href="#top">Wrap-up ⬆️</a></b>
+        </p>
+        <ul class="toc_list" style="padding-bottom:10px;">
+            <li><a class="link-no" href="#goals">Goals</a>
+                <ul>
+                    <li><a class="link-no" href="#difficulty">Difficulty and Size</a></li>
+                    <li><a class="link-no" href="#quality">Quality</a></li>
+                    <li><a class="link-no" href="#hints1">Hints</a></li>
+                    <li><a class="link-no" href="#style">Hunt Style</a></li>
+                </ul>
+            </li>
+            <li><a class="link-no" href="#writing">Writing</a>
+                <ul>
+                    <li><a class="link-no" href="#theme">Theme and Story</a></li>
+                    <li><a class="link-no" href="#puzzles">Puzzles</a></li>
+                    <li><a class="link-no" href="#accessibility">Accessibility</a></li>
+                    <li><a class="link-no" href="#testsolving">Testsolving</a></li>
+                </ul>
+            </li>
+            <li><a class="link-no" href="#reflections">Reflections</a>
+                <ul>
+                <li><a class="link-no" href="#general">General</a></li>
+                <li><a class="link-no" href="#puzzlesref">Puzzles</a></li>
+                    <li><a class="link-no" href="#hints2">Hints</a></li>
+                    <li><a class="link-no" href="#difficulty2">Difficulty</a></li>
+                </ul>
+            </li>
+            <li><a class="link-no" href="#other">Other</a>
+                <ul>
+                    <li><a class="link-no" href="#future">Future</a></li>
+                    <li><a class="link-no" href="#credits">Credits</a></li>
+                    <li><a class="link-no" href="#tech">Tech</a></li>
+                    <li><a class="link-no" href="#cheating">Cheating</a></li>
+                </ul>
+            </li>
+            <li><a class="link-no" href="#appendix">Appendix</a>
+                <ul>
+                    <li><a class="link-no" href="#advertisements">Advertisements</a></li>
+                    <li><a class="link-no" href="#guesses">Guesses</a></li>
+                    <li><a class="link-no" href="#flags">Team Flags</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div style="display:block; padding-left:10px; padding-right:10px;">
+    
+      <div style="width:100%">
+          <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg style="width:100%"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="490mm"
+   height="100%"
+   viewBox="0 0 490 300"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.2-2 (e86c870879, 2021-01-15)"
+   sodipodi:docname="drawing.html">
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient2602">
+      <stop
+         style="stop-color:#e3fbff;stop-opacity:1"
+         offset="0"
+         id="stop2598" />
+      <stop
+         style="stop-color:#fdf0fe;stop-opacity:1"
+         offset="1"
+         id="stop2600" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient927">
+      <stop
+         style="stop-color:#fcc6d7;stop-opacity:0.81124496"
+         offset="0"
+         id="stop923" />
+      <stop
+         style="stop-color:#e3c0ff;stop-opacity:1"
+         offset="1"
+         id="stop925" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient927"
+       id="linearGradient929"
+       x1="-48.831707"
+       y1="-117.22408"
+       x2="-42.795124"
+       y2="198.01802"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.3637121,0,0,1.1948543,302.46042,168.82009)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2602"
+       id="linearGradient2606"
+       x1="44.151123"
+       y1="191.36729"
+       x2="48.103897"
+       y2="560.53088"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.1155868,0,0,1.0404465,204.11952,-219.1544)" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.33994837"
+     inkscape:cx="968.09771"
+     inkscape:cy="918.91294"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:snap-global="false" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:url(#linearGradient2606);fill-opacity:1;stroke:none;stroke-width:2.15473;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+       id="rect861"
+       width="543.29132"
+       height="313.15652"
+       x="-25.743416"
+       y="-6.2372184"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       id="ellipse890"
+       style="fill:#aeebfe;fill-opacity:0.863454;stroke:none;stroke-width:1.60667;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:stroke fill markers"
+       d="m 231.29543,106.89067 c -8.10048,0.0506 -16.27098,1.81063 -15.00435,8.49766 -5.72547,-3.04566 -23.2338,-1.43684 -22.84451,7.41464 -10.20679,-6.31597 -25.44687,0.73719 -15.90752,10.77322 1.41436,-0.10287 71.76221,1.00052 77.76029,0.46766 5.7338,-0.50937 5.33768,-0.89894 1.39246,-1.34394 a 23.152707,6.8405737 0 0 0 18.6028,-5.49656 23.152707,6.8405737 0 0 0 -22.48386,-6.64326 c 8.49409,-3.66982 3.71356,-9.90715 -8.16861,-12.43669 -2.48412,-0.52884 -7.89841,-1.26671 -13.3467,-1.23273 z"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       id="ellipse902"
+       style="fill:#aeebfe;fill-opacity:0.863454;stroke:none;stroke-width:2.41511;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:stroke fill markers"
+       d="m 394.7725,77.899443 c -3.8038,0.04907 -7.30986,0.554099 -9.56212,1.075049 -3.84163,0.888619 -15.39891,10.261927 -13.05143,17.157627 a 23.568254,10.510815 22.260835 0 0 -9.19043,5.537671 23.568254,10.510815 22.260835 0 0 1.85063,5.70954 28.17703,7.855233 0 0 0 -21.39456,7.62449 28.17703,7.855233 0 0 0 20.10862,7.5259 c 0.90269,0.24878 2.39783,0.51657 4.58914,0.81354 7.2997,0.98932 92.91403,-1.05935 94.63531,-0.86836 46.80061,-7.79068 -3.01296,-18.74032 -19.82917,-16.15269 4.44619,-21.132962 -23.22236,-24.140716 -28.61099,-16.256561 -0.0617,0.0903 -0.12827,0.18038 -0.19825,0.27046 -0.1434,-10.22127 -10.54244,-12.550233 -19.34675,-12.436666 z"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:url(#linearGradient929);fill-opacity:1;stroke:none;stroke-width:0.337737px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 48.720311,226.9726 C 47.32692,127.42861 66.36175,23.385343 83.437264,30.596088 121.99859,46.87998 116.96809,113.05914 140.11732,133.92317 c 18.75134,16.90029 16.32694,-51.36937 34.94967,-49.022985 23.22308,2.926004 20.30008,65.643475 45.63834,73.043755 17.7232,5.17622 17.15506,-42.73727 32.64471,-43.24886 12.41116,-0.4099 8.26128,38.95939 28.78864,38.96863 18.00676,0.008 20.82195,-24.39897 42.78569,-24.6557 29.2448,-0.34185 48.24859,52.72568 64.81865,67.29907 17.26338,15.18318 31.03123,-50.52356 50.29783,16.04408 z"
+       id="path921"
+       sodipodi:nodetypes="csssssssscc"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:#a5c04b;fill-opacity:1;stroke:none;stroke-width:0.703915px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 75.920894,223.93817 c -6.265602,0.7137 -8.109293,3.02627 -12.724348,5.99567 -1.638705,-1.12861 -5.374735,-12.75375 -5.666516,-15.25878 0,0 8.851991,4.93463 12.289294,-0.17324 0.307003,-0.45619 0.864668,-1.89381 0.359873,-2.56347 -1.858067,-2.46493 -10.655014,-1.78125 -13.286108,-3.68108 0,0 -0.930641,-12.52042 4.525974,-18.48934 0,0 2.20936,4.73676 2.370115,5.60886 0.290832,1.57787 2.864525,4.74099 4.36079,5.54381 2.2612,1.21326 6.527166,1.73753 6.592236,-2.56856 0.0932,-6.16037 -10.443915,-12.7243 -10.443915,-12.7243 -0.826296,-2.33575 1.709504,-5.48326 8.034846,-10.97198 1.021419,-0.88629 2.458179,14.35144 9.134039,11.6875 5.01128,-5.21444 -5.82712,-14.61881 -5.82712,-14.61881 0.29792,-0.24559 6.03514,-9.90959 6.406,-9.75028 3.71747,1.59685 9.12539,7.64919 9.12539,7.64919 0.22737,3.77727 -3.37426,8.90835 -0.75119,11.61191 3.48037,3.58721 5.16525,-7.53444 5.16525,-7.53444 2.49934,2.06792 5.520916,6.12736 8.844966,7.33479 0,0 -7.622266,8.73113 -5.871646,11.05353 1.754656,2.32773 7.548526,0.26492 8.855156,-1.63228 0.78347,-1.13755 1.5589,-3.44314 1.5589,-3.44314 2.14117,1.06771 7.26823,10.42014 7.58981,11.34786 0,0 -15.4811,0.57121 -7.78544,10.78035 2.82253,1.61145 8.87692,-3.33669 9.74282,-5.56814 -0.69145,0.12749 2.96667,9.11416 -0.66413,13.05074 -2.45686,2.66377 -7.90201,1.69882 -11.15895,2.68121 -2.17268,0.65532 -3.00774,4.10097 -4.81898,5.46629 -4.134126,3.11632 -12.115906,2.45809 -16.883996,4.36076 -3.97733,0.70397 -4.02426,0.64046 -6.46148,-0.0576 -1.51856,-0.43892 -0.27143,-6.20261 -2.61164,-5.1371 z"
+       id="path988"
+       sodipodi:nodetypes="ccssssssssssccsssccssssccsssccsc"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:#88a936;fill-opacity:1;stroke:none;stroke-width:0.703915px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 85.786424,181.75904 c 4.29055,12.05524 5.77073,29.00379 5.20452,41.19927"
+       id="path990"
+       sodipodi:nodetypes="cc"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       id="path865"
+       style="fill:#aeebfe;fill-opacity:0.863454;stroke:none;stroke-width:2.04057;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:stroke fill markers"
+       d="m 67.072511,30.134689 c -1.683438,0.01409 -3.227302,0.173643 -4.482114,0.440778 C 46.824031,33.931914 30.62522,47.567628 39.394229,54.162852 a 29.405127,8.6878789 0 0 0 -2.358898,-0.02796 29.405127,8.6878789 0 0 0 -29.405014,8.687437 29.405127,8.6878789 0 0 0 23.856807,8.531869 c 0.473943,0.05362 0.975657,0.106063 1.538503,0.156058 7.617869,0.676764 96.963113,-0.724302 98.759413,-0.593673 12.29632,-12.936509 -11.60175,-15.266298 -20.7798,-13.312415 -0.23214,0.04942 -0.48239,0.100029 -0.73287,0.150263 2.09775,-10.894452 -13.509386,-9.541703 -20.652726,-8.020981 -2.37042,0.504627 -5.14296,1.056351 -8.06264,1.642898 9.23273,-16.19459 -4.11615,-21.080574 -13.754785,-21.238509 -0.245747,-0.0039 -0.489216,-0.0052 -0.729708,-0.0032 z"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:#f4ec7f;fill-opacity:1;stroke:none;stroke-width:0.287628px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 48.123241,226.26502 c 21.836871,15.34137 69.229249,15.56379 102.226419,8.66336 5.21519,-1.09061 -30.12691,7.93863 -2.08626,11.02609 6.98897,0.76952 14.10286,1.78937 21.16058,2.1002 32.95147,1.45127 69.2874,-5.90758 101.63034,-1.83766 4.5116,0.56771 -4.1883,4.28327 2.68233,6.3006 27.44035,8.05697 98.94665,5.80554 126.96343,-3.67535 37.73623,-12.76997 -6.82465,-13.79918 2.68233,-15.75156 10.63836,-2.18472 26.88536,-12.7931 36.65844,-20.73954 z"
+       id="path976"
+       sodipodi:nodetypes="cssssssscc"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <g
+       id="g986"
+       transform="matrix(1.7838478,0,0,1.7838478,396.69629,140.31398)"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200">
+      <path
+         style="fill:#88a936;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m -189.83959,45.844568 c -2.36469,-0.163099 -3.20377,0.566112 -5.11203,1.349287 -0.52884,-0.528846 -1.11776,-5.080595 -1.05493,-6.026449 0,0 2.93588,2.427203 4.5545,0.7733 0.14456,-0.147706 0.44865,-0.641118 0.30769,-0.923047 -0.51888,-1.037757 -3.81722,-1.384426 -4.66035,-2.265971 0,0 0.50909,-4.691535 2.93281,-6.526126 0,0 0.49393,1.901462 0.49393,2.234784 0,0.603065 0.73583,1.947669 1.23422,2.346377 0.75318,0.602541 2.29435,1.087005 2.61181,-0.500287 0.45416,-2.270819 -2.99357,-5.415101 -2.99357,-5.415101 -0.14629,-0.919697 1.00552,-1.910387 3.71764,-3.508278 0.43795,-0.258023 -0.0692,5.472438 2.58002,4.942594 2.20769,-1.586041 -1.1579,-5.800827 -1.1579,-5.800827 0.12686,-0.07048 2.90607,-3.251828 3.0323,-3.167675 1.26535,0.843566 2.85198,3.449268 2.85198,3.449268 -0.17332,1.411743 -1.85427,3.063026 -1.06887,4.241119 1.04209,1.563137 2.42269,-2.433141 2.42269,-2.433141 0.78296,0.934701 1.62328,2.641136 2.76974,3.313936 0,0 -3.41245,2.708081 -2.92358,3.685822 0.49,0.980001 2.77223,0.612262 3.38449,0 0.36712,-0.367112 0.81085,-1.166525 0.81085,-1.166525 0.71872,0.54056 1.97668,4.34699 2.03234,4.711833 0,0 -5.76145,-0.843683 -3.61239,3.454448 0.93354,0.787978 3.50866,-0.628559 3.98078,-1.394411 -0.26427,0 0.47562,3.571157 -1.13472,4.778911 -1.08967,0.81725 -3.03669,0.08955 -4.30755,0.230762 -0.84777,0.0942 -1.39122,1.310976 -2.15377,1.692248 -1.7405,0.870254 -4.64608,0.08309 -6.53823,0.461523 -1.51817,-0.01078 -1.53119,-0.03745 -2.38454,-0.461523 -0.53142,-0.265713 0.32229,-2.311265 -0.61536,-2.076852 z"
+         id="path978"
+         sodipodi:nodetypes="ccssssssssssccsssccssssccsssccsc" />
+      <path
+         style="fill:#a5c04b;fill-opacity:1;stroke:#a5c04b;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m -183.7763,32.441903 c 0.76458,4.748518 0.15691,11.114333 -0.88334,15.58377"
+         id="path982"
+         sodipodi:nodetypes="cc" />
+    </g>
+    <g
+       id="g1002"
+       transform="matrix(-1.3047048,-0.42675322,-0.42675322,1.3047048,-111.69781,83.730369)"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200">
+      <path
+         style="fill:#88a936;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m -189.83959,45.844568 c -2.36469,-0.163099 -3.20377,0.566112 -5.11203,1.349287 -0.52884,-0.528846 -1.11776,-5.080595 -1.05493,-6.026449 0,0 2.93588,2.427203 4.5545,0.7733 0.14456,-0.147706 0.44865,-0.641118 0.30769,-0.923047 -0.51888,-1.037757 -3.81722,-1.384426 -4.66035,-2.265971 0,0 0.50909,-4.691535 2.93281,-6.526126 0,0 0.49393,1.901462 0.49393,2.234784 0,0.603065 0.73583,1.947669 1.23422,2.346377 0.75318,0.602541 2.29435,1.087005 2.61181,-0.500287 0.45416,-2.270819 -2.99357,-5.415101 -2.99357,-5.415101 -0.14629,-0.919697 1.00552,-1.910387 3.71764,-3.508278 0.43795,-0.258023 -0.0692,5.472438 2.58002,4.942594 2.20769,-1.586041 -1.1579,-5.800827 -1.1579,-5.800827 0.12686,-0.07048 2.90607,-3.251828 3.0323,-3.167675 1.26535,0.843566 2.85198,3.449268 2.85198,3.449268 -0.17332,1.411743 -1.85427,3.063026 -1.06887,4.241119 1.04209,1.563137 2.42269,-2.433141 2.42269,-2.433141 0.78296,0.934701 1.62328,2.641136 2.76974,3.313936 0,0 -3.41245,2.708081 -2.92358,3.685822 0.49,0.980001 2.77223,0.612262 3.38449,0 0.36712,-0.367112 0.81085,-1.166525 0.81085,-1.166525 0.71872,0.54056 1.97668,4.34699 2.03234,4.711833 0,0 -5.76145,-0.843683 -3.61239,3.454448 0.93354,0.787978 3.50866,-0.628559 3.98078,-1.394411 -0.26427,0 0.47562,3.571157 -1.13472,4.778911 -1.08967,0.81725 -3.03669,0.08955 -4.30755,0.230762 -0.84777,0.0942 -1.39122,1.310976 -2.15377,1.692248 -1.7405,0.870254 -4.64608,0.08309 -6.53823,0.461523 -1.51817,-0.01078 -1.53119,-0.03745 -2.38454,-0.461523 -0.53142,-0.265713 0.32229,-2.311265 -0.61536,-2.076852 z"
+         id="path998"
+         sodipodi:nodetypes="ccssssssssssccsssccssssccsssccsc" />
+      <path
+         style="fill:#a5c04b;fill-opacity:1;stroke:#a5c04b;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m -183.7763,32.441903 c 0.76458,4.748518 0.15691,11.114333 -0.88334,15.58377"
+         id="path1000"
+         sodipodi:nodetypes="cc" />
+    </g>
+    <g
+       id="g1012"
+       transform="matrix(-1.5655231,-0.3087009,-0.28534164,1.6936835,145.60316,75.480611)"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200">
+      <path
+         style="fill:#88a936;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m -189.83959,45.844568 c -2.36469,-0.163099 -3.20377,0.566112 -5.11203,1.349287 -0.52884,-0.528846 -1.11776,-5.080595 -1.05493,-6.026449 0,0 2.93588,2.427203 4.5545,0.7733 0.14456,-0.147706 0.44865,-0.641118 0.30769,-0.923047 -0.51888,-1.037757 -3.81722,-1.384426 -4.66035,-2.265971 0,0 0.50909,-4.691535 2.93281,-6.526126 0,0 0.49393,1.901462 0.49393,2.234784 0,0.603065 0.73583,1.947669 1.23422,2.346377 0.75318,0.602541 2.29435,1.087005 2.61181,-0.500287 0.45416,-2.270819 -2.99357,-5.415101 -2.99357,-5.415101 -0.14629,-0.919697 1.00552,-1.910387 3.71764,-3.508278 0.43795,-0.258023 -0.0692,5.472438 2.58002,4.942594 2.20769,-1.586041 -1.1579,-5.800827 -1.1579,-5.800827 0.12686,-0.07048 2.90607,-3.251828 3.0323,-3.167675 1.26535,0.843566 2.85198,3.449268 2.85198,3.449268 -0.17332,1.411743 -1.85427,3.063026 -1.06887,4.241119 1.04209,1.563137 2.42269,-2.433141 2.42269,-2.433141 0.78296,0.934701 1.62328,2.641136 2.76974,3.313936 0,0 -3.41245,2.708081 -2.92358,3.685822 0.49,0.980001 2.77223,0.612262 3.38449,0 0.36712,-0.367112 0.81085,-1.166525 0.81085,-1.166525 0.71872,0.54056 1.97668,4.34699 2.03234,4.711833 0,0 -5.76145,-0.843683 -3.61239,3.454448 0.93354,0.787978 3.50866,-0.628559 3.98078,-1.394411 -0.26427,0 0.47562,3.571157 -1.13472,4.778911 -1.08967,0.81725 -3.03669,0.08955 -4.30755,0.230762 -0.84777,0.0942 -1.39122,1.310976 -2.15377,1.692248 -1.7405,0.870254 -4.64608,0.08309 -6.53823,0.461523 -1.51817,-0.01078 -1.53119,-0.03745 -2.38454,-0.461523 -0.53142,-0.265713 0.32229,-2.311265 -0.61536,-2.076852 z"
+         id="path1008"
+         sodipodi:nodetypes="ccssssssssssccsssccssssccsssccsc" />
+      <path
+         style="fill:#a5c04b;fill-opacity:1;stroke:#a5c04b;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m -183.7763,32.441903 c 0.76458,4.748518 0.15691,11.114333 -0.88334,15.58377"
+         id="path1010"
+         sodipodi:nodetypes="cc" />
+    </g>
+    <g
+       id="g1026"
+       transform="matrix(0.67229224,0,0,0.67229224,427.35985,-79.387947)"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200">
+      <path
+         style="fill:#a5c04b;fill-opacity:1;stroke:none;stroke-width:0.375436px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m -35.319454,440.34494 c -3.34179,0.38066 -4.32513,1.61408 -6.78659,3.19782 -0.87401,-0.60195 -2.86664,-6.80227 -3.02226,-8.13834 0,0 4.72125,2.6319 6.55455,-0.0924 0.16374,-0.24331 0.46117,-1.01007 0.19194,-1.36723 -0.99101,-1.31469 -5.6829,-0.95004 -7.08621,-1.96333 0,0 -0.49636,-6.67782 2.41395,-9.86137 0,0 1.17837,2.52637 1.26411,2.99151 0.15512,0.84156 1.52781,2.52863 2.32585,2.95682 1.20602,0.64709 3.48129,0.92671 3.516,-1.36995 0.0497,-3.28567 -5.57031,-6.78657 -5.57031,-6.78657 -0.44071,-1.24578 0.91177,-2.92452 4.28542,-5.85195 0.54478,-0.47271 1.31108,7.6544 4.87168,6.23358 2.67279,-2.78114 -3.10792,-7.79701 -3.10792,-7.79701 0.1589,-0.13099 3.21887,-5.28533 3.41667,-5.20036 1.98273,0.85169 4.86707,4.07973 4.86707,4.07973 0.12127,2.01462 -1.79968,4.75131 -0.40065,6.19327 1.85627,1.91326 2.75491,-4.01853 2.75491,-4.01853 1.33303,1.10294 2.9446,3.26806 4.7175,3.91204 0,0 -4.06537,4.65679 -3.13167,5.89545 0.93586,1.24151 4.02604,0.1413 4.72294,-0.87058 0.41787,-0.60672 0.83145,-1.83641 0.83145,-1.83641 1.142,0.56946 3.87654,5.55762 4.04806,6.05243 0,0 -8.25692,0.30465 -4.1524,5.74975 1.50541,0.85947 4.73454,-1.77964 5.19637,-2.9698 -0.36878,0.068 1.58229,4.86108 -0.35421,6.96068 -1.31038,1.42073 -4.21457,0.90607 -5.95168,1.43003 -1.15881,0.34952 -1.60419,2.18727 -2.57023,2.91547 -2.20495,1.66211 -6.46207,1.31103 -9.00515,2.32583 -2.12133,0.37547 -2.14636,0.3416 -3.44626,-0.0307 -0.80993,-0.2341 -0.14477,-3.30819 -1.39293,-2.73989 z"
+         id="path1020"
+         sodipodi:nodetypes="ccssssssssssccsssccssssccsssccsc" />
+      <path
+         style="fill:#88a936;fill-opacity:1;stroke:none;stroke-width:0.375436px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m -30.305834,420.08237 c 2.28838,6.42972 3.07784,15.4693 2.77585,21.97382"
+         id="path1022"
+         sodipodi:nodetypes="cc" />
+    </g>
+    <path
+       style="fill:none;fill-opacity:0.858824;stroke:#f6c5e2;stroke-width:1.02028;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.858824"
+       d="M 56.897365,77.63814 C 46.171501,110.69727 43.214028,158.12308 43.063414,194.57845"
+       id="path1030"
+       sodipodi:nodetypes="cc"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-opacity:0.858824;stroke:#f6c5e2;stroke-width:1.02028;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.858824"
+       d="M 44.596768,98.217449 C 37.879615,118.92094 36.027485,148.62167 35.933161,171.4521"
+       id="path1032"
+       sodipodi:nodetypes="cc"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-opacity:0.858824;stroke:#f6c5e2;stroke-width:1.02028;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.858824"
+       d="m 191.99359,83.505519 c 11.60334,24.589661 14.19256,34.026821 20.76023,57.967561"
+       id="path1034"
+       sodipodi:nodetypes="cc"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-opacity:0.858824;stroke:#f6c5e2;stroke-width:1.02028;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.858824"
+       d="m 339.41944,126.04197 c 26.67802,10.23023 44.53431,63.60711 54.06572,65.4346 8.29775,1.59095 17.95531,-16.89532 21.01572,-16.14191"
+       id="path1036"
+       sodipodi:nodetypes="csc"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#adeafe;stroke-width:1.02028;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.866667"
+       d="M 33.296597,47.638499 C 37.40752,34.980405 49.310941,28.793718 61.853958,26.703221"
+       id="path1046"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#adeafe;stroke-width:1.02028;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.866667"
+       d="m 379.38678,126.7334 c 10.00062,0.45124 86.12078,3.3841 104.74348,-6.68601"
+       id="path1784"
+       sodipodi:nodetypes="cc"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:#f3df73;fill-opacity:1;stroke:none;stroke-width:0.269949px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 180.26826,226.26099 c -3.18389,-1.44755 -25.75623,6.52282 -21.91061,10.36842 3.34983,3.34986 17.61333,2.84154 21.44646,2.29395 17.29935,-2.47134 33.52945,0.12218 51.04805,0.77098 13.9981,0.51845 31.14121,-0.66731 45.07564,0.65979 12.76398,1.21562 22.01241,5.86119 35.41291,5.86119 5.65024,0 18.49124,-0.47616 22.10626,-6.26019 0.98239,-1.57181 0.56615,-3.78887 1.76066,-5.28203 0.76495,-0.95615 3.57265,-3.49093 2.93447,-5.08638 -2.6587,-6.64676 -20.55408,-3.62365 -26.2145,-3.32573 -9.5178,0.50095 -19.29879,-1.37511 -28.75768,-0.58687 -8.46603,0.70549 -16.89707,2.49223 -25.43196,1.76066 -13.70433,-1.17466 -26.77131,-3.52136 -40.69115,-3.52136 -7.53343,0 -18.17507,-2.02769 -25.43198,0.39127 -3.20906,1.0697 -8.6539,3.75144 -11.34657,1.9563 z"
+       id="path2495"
+       sodipodi:nodetypes="csssssssssssssc"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:#ddcb65;fill-opacity:1;stroke:none;stroke-width:0.269949px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 200.15329,228.03254 c -1.33692,0.51134 -19.15662,1.33578 -18.52781,3.22223 0.40056,1.20164 16.4138,3.12489 19.33338,3.22222 9.38101,0.31268 19.00983,-0.74552 28.32877,0 20.40878,1.63271 40.95346,2.63544 61.49088,3.22223 9.47949,0.27084 19.18914,4.09176 28.73155,2.81942 1.56446,-0.20857 6.37858,-0.72958 6.04167,-3.08795 -0.43895,-3.07271 -19.31144,-4.47113 -22.95837,-4.69908 -6.71811,-0.41989 -13.1766,-1.70892 -20.00469,-1.87964 -5.73355,-0.14335 -11.62364,0.81098 -17.31948,0.26851 -14.58907,-1.38942 -28.85322,-5.5325 -43.5001,-6.5787 -7.12794,-0.50916 -15.15519,5.10588 -21.6158,3.49076 z"
+       id="path2497"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:#21887b;fill-opacity:1;stroke:#29815d;stroke-width:1.02028;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 197.12274,208.8852 c 0,0 0.52005,5.61451 0.97163,11.24105 0.42847,5.33877 0.77734,10.69284 1.21297,11.10897 1.01646,0.97095 11.59513,0.25206 11.59513,0.25206 l 1.31044,-6.50785 9.27642,-30.04201 z"
+       id="path1913"
+       sodipodi:nodetypes="csscccc"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:#21887b;fill-opacity:1;stroke:#29815d;stroke-width:1.02028;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 313.36735,164.21719 c 0,0 2.70413,33.92588 3.56803,50.84815 0.29565,5.79111 1.87363,17.25934 1.87363,17.25934 0,0 -4.05119,0.25232 -6.07808,0.35501 -2.01986,0.10233 -4.95242,0.69694 -6.06177,0.26022 -0.99137,-0.39026 -4.26506,-10.02752 -6.82579,-14.82877 -4.62735,-8.67614 -15.38201,-25.17106 -15.38201,-25.17106 z"
+       id="path1915"
+       sodipodi:nodetypes="cscssscc"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:#66ba7a;fill-opacity:1;stroke:#29815d;stroke-width:1.02028;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 112.81671,217.72058 c 2.64514,2.34954 6.13684,3.30647 9.78676,3.61064 10.83236,0.60237 21.13736,-0.15873 31.45067,-1.33024 8.75059,-0.97229 19.60667,-1.91757 28.12508,-3.99072 8.26728,-2.01202 17.39013,-4.90218 25.29524,-7.53722 3.50838,-1.16945 5.62146,-1.94486 9.10095,-3.10469 3.81693,-0.43502 7.49973,1.28314 11.30703,1.04519 10.09093,-0.63069 24.54519,-8.52495 33.54103,-12.82732 3.31906,-1.58737 6.99278,-2.30396 10.35688,-3.70567 -1.38073,-4.65533 -9.32118,-6.16368 -13.24754,-7.57472 -26.05321,-9.36287 -39.75731,11.17805 -62.287,17.61511 -7.42034,2.12011 -15.26666,2.06869 -22.8292,3.52302 -9.15082,1.75977 -17.7707,5.50081 -26.63402,8.45526 -4.73721,1.57906 -9.97809,1.53842 -14.93761,3.66394 -4.18664,-1.77444 -15.37011,4.11493 -19.02827,2.15742 z"
+       id="path1892"
+       sodipodi:nodetypes="cccsscsscsssscc"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:#f0f9a3;fill-opacity:1;stroke:#29815d;stroke-width:1.02028;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 123.48311,214.41939 c -0.62558,-2.18957 -0.82647,-7.26667 -3.15768,-8.03775 -3.48572,-1.15292 -4.94004,1.62123 -5.16712,3.50216 -0.29145,2.41429 -0.12114,4.35108 -0.0575,6.31536 2.80881,-0.29362 5.46074,-0.67975 8.38224,-1.77977 z"
+       id="path1834"
+       sodipodi:nodetypes="csscc"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:#f0f9a3;fill-opacity:1;stroke:#29815d;stroke-width:1.02028;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 140.21681,210.82007 c -0.6256,-2.18957 -0.82648,-7.26668 -3.15768,-8.03774 -3.48572,-1.15294 -4.94005,1.62122 -5.16711,3.50215 -0.29147,2.41429 -0.12116,4.35107 -0.0575,6.31537 2.80879,-0.29364 5.46072,-0.67977 8.38223,-1.77978 z"
+       id="path1836"
+       sodipodi:nodetypes="csscc"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:#f0f9a3;fill-opacity:1;stroke:#29815d;stroke-width:1.02028;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 156.83939,203.90112 c -1.18122,-1.94687 -2.71478,-6.79097 -5.16683,-6.91953 -3.6664,-0.1922 -4.33711,2.8674 -4.05978,4.74158 0.35599,2.4056 1.03137,4.22879 1.61118,6.10665 2.63175,-1.02443 5.08778,-2.09669 7.61543,-3.9287 z"
+       id="path1838"
+       sodipodi:nodetypes="csscc"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:#f0f9a3;fill-opacity:1;stroke:#29815d;stroke-width:1.02028;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 174.10759,193.97871 c -1.31287,-1.86063 -3.17736,-6.58726 -5.63244,-6.54612 -3.67092,0.0615 -4.12869,3.1601 -3.72257,5.01065 0.5213,2.37527 1.32099,4.14748 2.02911,5.98079 2.55472,-1.20379 4.9308,-2.44312 7.3259,-4.44532 z"
+       id="path1840"
+       sodipodi:nodetypes="csscc"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:#f0f9a3;fill-opacity:1;stroke:#29815d;stroke-width:1.02028;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 192.27344,178.50929 c -1.58843,-1.63171 -4.1711,-6.00743 -6.58936,-5.58179 -3.61586,0.63645 -3.58202,3.76851 -2.89069,5.53248 0.88736,2.26414 1.95509,3.88898 2.94197,5.58856 2.33432,-1.58955 4.48664,-3.18619 6.53808,-5.53925 z"
+       id="path1842"
+       sodipodi:nodetypes="csscc"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:#f0f9a3;fill-opacity:1;stroke:#29815d;stroke-width:1.02028;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 207.48798,162.5095 c -1.84464,-1.33521 -5.1393,-5.20335 -7.44878,-4.36941 -3.45319,1.24696 -2.88285,4.32684 -1.89932,5.94616 1.2624,2.07848 2.59289,3.4962 3.85654,5.00142 2.02723,-1.96623 3.87394,-3.90826 5.49156,-6.57817 z"
+       id="path1844"
+       sodipodi:nodetypes="csscc"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:#f0f9a3;fill-opacity:1;stroke:#29815d;stroke-width:1.02028;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 224.05784,147.33285 c -1.67228,-1.54567 -4.48213,-5.7791 -6.87458,-5.22652 -3.57725,0.82624 -3.37828,3.95217 -2.59489,5.67721 1.00552,2.21419 2.15744,3.78047 3.23258,5.42565 2.24725,-1.71044 4.31237,-3.41838 6.23689,-5.87634 z"
+       id="path1846"
+       sodipodi:nodetypes="csscc"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:#f0f9a3;fill-opacity:1;stroke:#29815d;stroke-width:1.02028;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 240.10597,136.076 c -1.5765,-1.64321 -4.12727,-6.03763 -6.54855,-5.62959 -3.62039,0.61009 -3.60935,3.74233 -2.9309,5.51128 0.87087,2.27052 1.92673,3.9031 2.90123,5.60982 2.34581,-1.57251 4.50971,-3.15345 6.57822,-5.49151 z"
+       id="path1848"
+       sodipodi:nodetypes="csscc"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:#f0f9a3;fill-opacity:1;stroke:#29815d;stroke-width:1.02028;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 258.52189,129.15501 c -0.78829,-2.13641 -1.36994,-7.18408 -3.75248,-7.77786 -3.56247,-0.88786 -4.80431,1.98769 -4.88946,3.88037 -0.1093,2.42936 0.20599,4.34788 0.41707,6.30185 2.77882,-0.50379 5.39425,-1.08801 8.22487,-2.40436 z"
+       id="path1850"
+       sodipodi:nodetypes="csscc"
+       inkscape:transform-center-x="-1.6354804"
+       inkscape:transform-center-y="-0.073301418"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:#f0f9a3;fill-opacity:1;stroke:#29815d;stroke-width:1.02028;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 276.61525,130.66153 c 0.39765,-2.24222 2.44293,-6.89345 0.68572,-8.60849 -2.62743,-2.56438 -5.15076,-0.70861 -6.17947,0.88239 -1.32036,2.04212 -2.0164,3.85753 -2.82029,5.65092 2.65323,0.96748 5.20599,1.78306 8.31404,2.07518 z"
+       id="path1852"
+       sodipodi:nodetypes="csscc"
+       inkscape:transform-center-x="-0.32815852"
+       inkscape:transform-center-y="0.40051017"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:#f0f9a3;fill-opacity:1;stroke:#29815d;stroke-width:1.02028;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 298.58172,135.48106 c 0.26514,-2.26172 2.03339,-7.02517 0.17837,-8.63392 -2.77366,-2.40544 -5.18349,-0.40453 -6.11686,1.2442 -1.19804,2.11623 -1.78613,3.96942 -2.48318,5.80698 2.70553,0.8098 5.30184,1.47386 8.42167,1.58274 z"
+       id="path1854"
+       sodipodi:nodetypes="csscc"
+       inkscape:transform-center-x="-0.39545695"
+       inkscape:transform-center-y="0.23399024"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:#f0f9a3;fill-opacity:1;stroke:#29815d;stroke-width:1.02028;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 320.62812,126.42633 c -1.86195,-1.311 -5.20684,-5.13579 -7.50522,-4.27175 -3.43662,1.29196 -2.8261,4.36412 -1.82152,5.97046 1.28944,2.0618 2.63833,3.46203 3.92155,4.95062 2.00137,-1.99254 3.82256,-3.95851 5.40519,-6.64933 z"
+       id="path1856"
+       sodipodi:nodetypes="csscc"
+       inkscape:transform-center-x="-1.3865474"
+       inkscape:transform-center-y="-0.042988465"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:#f0f9a3;fill-opacity:1;stroke:#29815d;stroke-width:1.02028;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 331.40896,108.73867 c -2.20664,-0.56242 -6.69387,-2.94613 -8.53418,-1.32061 -2.75171,2.43056 -1.08766,5.08424 0.42287,6.2278 1.93887,1.46781 3.69781,2.29623 5.42684,3.23059 1.16109,-2.57441 2.16325,-5.05986 2.68447,-8.13778 z"
+       id="path1858"
+       sodipodi:nodetypes="csscc"
+       inkscape:transform-center-x="-0.60043698"
+       inkscape:transform-center-y="-0.25649378"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <g
+       id="g2254"
+       transform="matrix(1.0202825,0,0,1.0202825,238.65442,95.130159)"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200">
+      <path
+         style="fill:#53b29e;fill-opacity:1;stroke:#29815d;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 20.772682,32.50827 c 11.00174,-0.73345 21.58434,2.19722 32.15538,4.57185 3.76788,0.47099 8.56563,1.39015 12.64879,0.76198 2.29129,-0.35251 7.06401,-0.83382 8.87945,-2.25073 8.802621,-6.8702 12.928421,-12.75642 18.170171,-26.75284 1.24941,-3.33616 2.62117,-6.45409 4.13744,-10.08628 0.79309,-1.89983 2.26877,-10.98504 0.50507,-12.74875 -0.31394,-0.31393 -7.53049,4.30093 -5.07043,-4.249916 0.26288,-0.91375 1.13012,-2.71541 1.92658,-3.98946 2.99367,-4.78876 8.416497,-10.68429 14.099147,-9.73718 1.32357,0.22059 5.99505,1.90891 7.03338,1.38974 0.86143,-0.43071 4.08644,-3.40704 5.07735,-4.00158 6.53447,-3.92067 13.17982,-9.20631 17.52132,1.96345 3.88026,9.98305 -5.60129,20.242786 -9.57528,24.216786 -1.4471,1.44709 -5.96031,3.27587 -8.32227,3.61329 -3.48601,0.498 -7.57809,-4.53365 -7.67799,-3.90404 -2.01862,12.72295 -4.41598,18.83269 -7.08121,27.18332 -1.91933,5.80463 -3.64792,10.06754 -5.791007,14.78233 -5.30012,11.66026 -16.69738,32.29316 -26.813581,40.70089 -2.89658,2.40739 -10.4798,6.45978 -12.81308,9.9597 -4.151,12.61286 -6.53261,18.35379 -9.74358,26.73054 -2.65837,6.93513 -5.170359,14.21142 -7.45332,21.46913 -1.842893,5.8587 -1.21095,5.95235 -7.70938,5.78399 -0.95151,0 -4.7775,0.26695 -5.492,-0.20939 -0.79713,-0.53141 -0.533276,-4.8324 -0.724244,-6.0004 -2.061713,-12.60987 -2.227026,-38.86051 -4.076826,-38.39077 -6.55212,1.66386 -9.55022,3.20049 -15.02928,4.9105 -0.60353,0.0862 -10.15776,3.55493 -10.42071,4.08081 -1.45778,2.91557 -2.68584,7.93466 -4.00068,11.0026 -3.10268,7.2396 -3.40456,12.97812 -6.51458,20.08601 -0.14103,0.32232 -4.92968,0.46297 -5.56181,0.46297 -1.65037,0 -6.34828,1.13053 -6.47741,-0.19782 -1.172919,-9.17265 -0.59747,-17.96096 -2.37307,-26.91448 -9.0574,2.58783 -19.118448,4.35459 -28.591293,7.36411 -10.64138,3.38076 -46.998109,8.75128 -64.068319,7.20888 -1.6617,-0.15014 -3.66681,-0.55637 -4.78613,-1.63922 7.15025,-3.47434 15.16862,-4.00796 22.94642,-5.6167 7.732559,-1.59937 34.124989,-14.84232 39.211092,-19.26311 25.60418,-22.25484 52.63542,-56.95278 81.85589,-62.29021 z"
+         id="path1828"
+         sodipodi:nodetypes="ccssssssscsssssscsscsscsssccsssccsssssc" />
+      <path
+         style="fill:#b6f5fe;fill-opacity:0.690763;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m -119.23089,118.48879 c 9.65152,-0.60456 11.35947,0.13087 23.729071,-3.0375 8.461386,-2.16732 39.065881,-17.512058 45.266722,-24.264052 3.92516,-4.274042 17.351305,-16.037736 21.227112,-21.205479 4.72745,-6.303267 37.2164987,-31.154224 45.82894,-32.876712 21.124427,-4.224885 31.558969,6.664815 48.978662,4.65486 6.018538,-0.694444 18.512654,-1.677127 26.762695,-31.50886 l -3.802776,8.04192 -4.186771,6.892068 -4.573242,5.53942 -6.183538,5.539419 -9.855013,1.610296 -7.536187,-0.257647 c -2.497203,-0.26537 -4.926804,-1.045608 -7.440138,-1.324867 l -13.005184,-2.8443 -10.540628,-1.059951 -7.066343,0.529976 -8.8918153,2.767651 -7.3607738,4.004261 -6.8307982,4.063147 -9.9517667,7.714091 -12.130555,10.36397 -8.244067,8.244066 -10.422855,10.069539 -11.836125,11.365035 -5.594188,4.94644 -8.832929,5.005329 -12.071669,6.06527 -9.775107,4.18092 -5.535302,2.00213 -9.892881,1.76659 -10.30508,2.35545 z"
+         id="path2250"
+         sodipodi:nodetypes="csssssccccccccccccccccccccccccccc" />
+    </g>
+    <path
+       style="fill:#98e0e1;fill-opacity:1;stroke:none;stroke-width:0.269949px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 334.72169,72.682383 c 4.65221,-3.725919 6.19315,-6.518727 12.5333,-7.494127 2.70247,-0.415765 5.88232,0.138329 8.31247,-1.076746 l -6.33124,-1.421304 -2.62726,-0.387626 -4.00548,1.679723 -3.70402,2.756456 z"
+       id="path2437"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:#3f8a72;fill-opacity:1;stroke:none;stroke-width:0.269949px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 210.58094,198.00341 c -7.56998,3.20111 -3.13124,1.52397 -10.66901,4.53909 -1.70696,0.68277 -12.69383,5.76497 -13.83325,7.55705 l 25.84606,-6.26119 z"
+       id="path2059"
+       sodipodi:nodetypes="csccc"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;stroke:#29815d;stroke-width:1.02028;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 212.49146,204.63574 -1.81492,-8.33024"
+       id="path2057"
+       sodipodi:nodetypes="cc"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:#3f8a72;fill-opacity:1;stroke:none;stroke-width:0.269949px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 262.03116,179.61265 c -7.57,3.2011 -11.0192,7.1262 -14.52336,10.63432 -1.29924,1.3007 -4.71624,5.13751 -5.85565,6.9296 l 10.91625,-3.71522 11.20992,-3.48713 z"
+       id="path2061"
+       sodipodi:nodetypes="cscccc"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;stroke:#29815d;stroke-width:1.02028;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 264.48688,192.20561 -2.933,-17.36653"
+       id="path1961"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:#3f8a72;fill-opacity:1;stroke:none;stroke-width:0.269949px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 332.609,76.656894 c 0.22794,3.673323 4.64324,3.313643 7.21196,2.457411 l -2.72452,2.243715 -2.77794,0.373953 -1.86975,-0.587641 z"
+       id="path2447"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;stroke:#29815d;stroke-width:1.02028;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 337.49943,80.946243 c 2.36183,-1.297493 3.95065,-2.95541 4.60743,-5.35735"
+       id="path2127"
+       sodipodi:nodetypes="cc"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:#98e0e1;fill-opacity:1;stroke:none;stroke-width:0.269949px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 221.85341,231.54955 12.89654,-24.72821 -2.72127,8.16386 -2.24804,8.87377 -2.83959,7.33564 z"
+       id="path2256"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.269949px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 114.28594,217.25688 Z"
+       id="path2248"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:#3f8a72;fill-opacity:1;stroke:none;stroke-width:0.269949px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 350.23782,99.547849 c -10.33049,23.588121 -22.78316,47.208451 -39.12387,67.634341 -2.19389,2.74235 -4.07131,6.83647 -6.45128,8.74044 l 9.495,-6.25885 6.91439,-7.74411 5.53151,-7.83631 4.24082,-6.82217 4.14862,-7.46755 3.4111,-7.00657 2.67355,-5.71588 2.76576,-6.36123 1.93603,-5.62371 1.65945,-4.79396 1.36416,-5.22312 z"
+       id="path2327"
+       sodipodi:nodetypes="csccccccccccccc"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:#98e0e1;fill-opacity:1;stroke:none;stroke-width:0.269949px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 358.36705,62.853992 c 5.55534,-3.768607 13.54166,-5.685901 19.01191,-0.712942 1.18542,1.077642 2.12911,2.444892 3.13697,3.564734 l -1.52095,-4.705451 -2.18637,-3.849903 -2.5666,-1.901195 -4.04004,-0.09509 -4.61039,2.13884 -6.89182,4.467796 z"
+       id="path2435"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:#3f8a72;fill-opacity:1;stroke:none;stroke-width:0.269949px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 353.81729,86.170477 c 4.78913,3.038282 11.43245,2.671952 16.24741,-0.07947 l -3.29715,2.423212 -5.08477,1.70817 -3.5355,-0.43698 z"
+       id="path2445"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <g
+       id="g2262"
+       transform="matrix(1.0202825,0,0,1.0202825,238.65442,95.130159)"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200">
+      <path
+         style="fill:#98e0e1;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 33.674483,137.84627 25.14511,-51.327 -12.598596,34.30007 -2.99519,9.48922 -2.783156,7.18982 z"
+         id="path2258"
+         sodipodi:nodetypes="cccccc" />
+      <path
+         style="fill:none;fill-opacity:1;stroke:#29815d;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 20.772682,32.50827 c 11.00174,-0.73345 21.58434,2.19722 32.15538,4.57185 3.76788,0.47099 8.56563,1.39015 12.64879,0.76198 2.29129,-0.35251 7.06401,-0.83382 8.87945,-2.25073 8.802621,-6.8702 12.928421,-12.75642 18.170171,-26.75284 1.24941,-3.33616 2.62117,-6.45409 4.13744,-10.08628 0.79309,-1.89983 2.26877,-10.98504 0.50507,-12.74875 -0.31394,-0.31393 -7.53049,4.30093 -5.07043,-4.249916 0.26288,-0.91375 1.13012,-2.71541 1.92658,-3.98946 2.99367,-4.78876 8.416497,-10.68429 14.099147,-9.73718 1.32357,0.22059 5.99505,1.90891 7.03338,1.38974 0.86143,-0.43071 4.08644,-3.40704 5.07735,-4.00158 6.53447,-3.92067 13.17982,-9.20631 17.52132,1.96345 3.88026,9.98305 -5.60129,20.242786 -9.57528,24.216786 -1.4471,1.44709 -4.55681,3.193311 -8.32227,3.61329 -3.4997,0.3903374 -7.57809,-4.53365 -7.67799,-3.90404 -2.01862,12.72295 -4.41598,18.83269 -7.08121,27.18332 -1.91933,5.80463 -3.64792,10.06754 -5.791007,14.78233 -5.30012,11.66026 -16.69738,32.29316 -26.813581,40.70089 -2.89658,2.40739 -10.4798,6.45978 -12.81308,9.9597 -4.151,12.61286 -6.53261,18.35379 -9.74358,26.73054 -2.65837,6.93513 -5.170359,14.21142 -7.45332,21.46913 -1.842893,5.8587 -1.21095,5.95235 -7.70938,5.78399 -0.95151,0 -4.7775,0.26695 -5.492,-0.20939 -0.79713,-0.53141 -0.533276,-4.8324 -0.724244,-6.0004 -2.061713,-12.60987 -2.227026,-38.86051 -4.076826,-38.39077 -6.55212,1.66386 -9.55022,3.20049 -15.02928,4.9105 -0.60353,0.0862 -10.15776,3.55493 -10.42071,4.08081 -1.45778,2.91557 -2.68584,7.93466 -4.00068,11.0026 -3.10268,7.2396 -3.40456,12.97812 -6.51458,20.08601 -0.14103,0.32232 -4.92968,0.46297 -5.56181,0.46297 -1.65037,0 -6.34828,1.13053 -6.47741,-0.19782 -1.172919,-9.17265 -0.59747,-17.96096 -2.37307,-26.91448 -9.0574,2.58783 -19.118448,4.35459 -28.591293,7.36411 -10.64138,3.38076 -46.998109,8.75128 -64.068319,7.20888 -1.6617,-0.15014 -3.66681,-0.55637 -4.78613,-1.63922 7.15025,-3.47434 15.16862,-4.00796 22.94642,-5.6167 7.732559,-1.59937 34.124989,-14.84232 39.211092,-19.26311 25.60418,-22.25484 52.63542,-56.95278 81.85589,-62.29021 z"
+         id="path2246"
+         sodipodi:nodetypes="ccssssssscsssssscsscsscsssccsssccsssssc" />
+    </g>
+    <g
+       id="g2394"
+       transform="matrix(1.0202825,0,0,1.0202825,277.30872,180.97019)"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200">
+      <path
+         style="fill:none;stroke:#29815d;stroke-width:0.8;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 74.107349,-99.839705 c 3.536368,0.691111 5.718302,-1.051615 5.718302,-4.611535"
+         id="path2388" />
+      <path
+         style="fill:none;stroke:#29815d;stroke-width:0.8;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 78.165496,-100.43921 c 2.548303,3.584513 4.465452,5.857161 8.442346,6.125942 2.139471,0.144598 6.25874,-0.905195 7.23687,-1.883325"
+         id="path2390"
+         sodipodi:nodetypes="csc" />
+    </g>
+    <circle
+       style="fill:#103327;fill-opacity:1;stroke:none;stroke-width:1.36014;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="path2396"
+       cx="354.16245"
+       cy="66.00753"
+       r="1.5147978"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;stroke:#103327;stroke-width:0.714198;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 354.0051,69.272599 c -0.056,-1.842854 1.83122,-3.208707 3.5227,-3.547011"
+       id="path2400"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;stroke:#103327;stroke-width:0.408113;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 351.52238,65.625273 c -0.056,-1.842854 2.77761,-4.288554 4.55403,-3.92314"
+       id="path2402"
+       sodipodi:nodetypes="cc"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <g
+       id="g2417"
+       transform="matrix(1.0202825,0,0,1.0202825,278.8111,180.45791)"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200">
+      <circle
+         style="fill:#103327;fill-opacity:1;stroke:none;stroke-width:0.91954;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="circle2404"
+         cx="93.583748"
+         cy="-116.43828"
+         r="1.0241064" />
+      <path
+         style="fill:#103327;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 93.968054,-117.37293 c -0.65059,-0.39117 -1.087951,-0.26299 -1.840953,0.19037 -0.214711,0.12927 -0.581687,0.57185 -0.690484,0.80032 -0.161337,0.3388 -0.299393,1.02943 -0.221454,1.10736 0.02183,0.0218 0.474839,-0.65268 0.524297,-0.6814 0.501589,-0.29125 0.773586,-0.37138 1.359323,-0.37138"
+         id="path2406"
+         sodipodi:nodetypes="cssssc" />
+      <path
+         style="fill:none;stroke:#103327;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 91.930468,-114.8904 c 0.759121,1.07462 1.962171,0.90472 2.63177,-0.0519"
+         id="path2412" />
+    </g>
+    <path
+       style="fill:#e1a253;fill-opacity:1;stroke:none;stroke-width:0.157836px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 337.80008,248.64299 c 0.0942,-1.24064 0.96136,-3.06961 2.16925,-3.57289 1.44457,-0.60191 4.06518,0.0461 5.07225,1.21222 0.51431,0.5955 0.62855,1.39782 0.98896,2.07356 0.0806,0.15116 0.92347,1.56481 0.73371,1.75456 -0.79318,0.79318 -8.04065,1.34582 -8.83657,0.35091 -0.53979,-0.67471 -0.1276,-1.17777 -0.1276,-1.81836 z"
+       id="path2499"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:#e1a253;fill-opacity:1;stroke:none;stroke-width:0.180354px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 352.82184,246.04361 c -0.0872,-1.74953 -0.89013,-4.32867 -2.00853,-5.0384 -1.33753,-0.8488 -3.76398,0.0651 -4.69642,1.70945 -0.47619,0.83975 -0.58198,1.97117 -0.91566,2.92409 -0.0746,0.21314 -0.85505,2.20664 -0.67936,2.47423 0.73439,1.11852 7.44487,1.89785 8.18182,0.49486 0.49978,-0.95149 0.11815,-1.66089 0.11815,-2.56423 z"
+       id="path2509"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:#e1a253;fill-opacity:1;stroke:none;stroke-width:0.269949px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 86.677014,227.5436 c 0.0439,-2.21591 1.29773,-6.34884 4.03769,-6.49304 0.85757,-0.0451 1.60245,0.34268 2.3735,0.65476 2.24266,0.90773 2.98007,1.67001 3.76487,3.98313 0.24808,0.73116 0.81692,1.83549 0.65477,2.64632 -0.0641,0.32045 -1.63697,0.36829 -1.96429,0.40922 -2.06507,0.25812 -7.66171,0.60684 -8.86654,-1.20039 z"
+       id="path2536"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:#e1a253;fill-opacity:1;stroke:none;stroke-width:0.190954px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 86.015164,229.38365 c -0.031,-1.56745 -0.91798,-4.49098 -2.85615,-4.59299 -0.60662,-0.032 -1.13352,0.2424 -1.67894,0.46317 -1.58639,0.6421 -2.10802,1.18131 -2.66316,2.81755 -0.17548,0.5172 -0.57786,1.29837 -0.46316,1.87192 0.0453,0.22669 1.15795,0.26053 1.38948,0.28948 1.46077,0.18259 5.41967,0.42926 6.27193,-0.84913 z"
+       id="path2538"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-opacity:0.858824;stroke:#f4ec7f;stroke-width:1.02028;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 43.775888,228.03043 c 16.06039,15.78903 56.460922,18.51237 89.440652,15.49325"
+       id="path2540"
+       sodipodi:nodetypes="cc"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;fill-opacity:0.858824;stroke:#f4ec7f;stroke-width:1.02028;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 282.35129,257.73259 c 25.00297,9.40147 91.5925,5.73724 121.05911,-4.94694"
+       id="path2542"
+       sodipodi:nodetypes="cc"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:#e1a253;fill-opacity:1;stroke:none;stroke-width:0.122462px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 371.39636,223.05937 c 0.0593,-1.18793 0.6044,-2.93918 1.3638,-3.42108 0.90818,-0.57634 2.55574,0.0442 3.18888,1.16072 0.32334,0.57018 0.39516,1.33842 0.62173,1.98546 0.0506,0.14473 0.58059,1.49831 0.46129,1.68 -0.49866,0.75949 -5.05509,1.28865 -5.55549,0.33602 -0.33935,-0.64607 -0.0802,-1.12775 -0.0802,-1.74112 z"
+       id="path2608"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:#e1a253;fill-opacity:1;stroke:none;stroke-width:0.183297px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 375.60786,225.25171 c 0.0298,-1.50461 0.88118,-4.31088 2.74161,-4.40879 0.58229,-0.0306 1.08807,0.23267 1.61162,0.44458 1.52277,0.61635 2.02347,1.13395 2.55635,2.70456 0.16845,0.49645 0.55469,1.24631 0.44459,1.79684 -0.0435,0.2176 -1.11151,0.25008 -1.33375,0.27787 -1.40219,0.17528 -5.20231,0.41205 -6.02042,-0.81506 z"
+       id="path2610"
+       
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+  </g>
+</svg>
+</div>
+        <p>Caution: Spoilers ahead!
+            <br><br>
+            Congrats to <a class="link" href="team/Cardinality.html">Cardinality</a> for being the first to save the dinosaurs! Through the once
+            inconspicuous bookshelf, they traveled back to the past to stop the prehistoric asteroid from
+            hitting Earth.
+            With the power of magic and creativity, they were able to <b>DEWEY DECIMATE THE ASTEROID</b> and save the dinosaurs.
+            They completed the hunt in 2 hours 24 minutes at 8:24 on
+            July 16, 2021.
+            <br><br>
+            We had 367 teams register, 322 teams complete at least one puzzle, and 181 teams that completed the entire hunt!
+            <br><br>
+            And a special shoutouts to the following teams:
+            <ul>
+                <li><a class="link" href="team/Just%2bZis%2bGuy%252C%2bY%2527Know%253F.html">Just Zis Guy, Y'Know?</a>,
+                <a class="link" href="team/Dirty%2bBayes.html">Dirty Bayes</a>, 
+                <a class="link" href="team/Wombat.html"><nobr>Wombat</nobr></a>, and
+                <a class="link" href="team/BestBeans.html">BestBeans</a> for finishing the hunt with <b>0</b> incorrect guesses!</li>
+                <ul>
+                <li><a class="link" href="team/Inert%2bOaken%2bHeron.html">Inert Oaken Heron</a>, <a class="link" href="team/Technology-Starved%2bBelated%2bIndividual.html">
+                <nobr>Technology-Starved Belated Individual</nobr></a>, <a class="link" href="team/Rage.html">Rage</a>,
+               <a class="link" href="team/Tweleve%2bPack.html"><nobr>Tweleve Pack</nobr></a>, <a class="link" href="team/Belmonsters.html">Belmonsters</a>, 
+               and
+               <a class="link" href="team/Extra%2bContestant%2bfrom%2b%252Fr%252FPictureGame.html"><nobr>Extra Contestant from /r/PictureGame</nobr></a>
+                were all very close, with one incorrect guess each (at time of completion)</li>
+                </ul>
+                <li><a class="link" href="team/Day%2bJog.html">Day Jog</a> for being the most prolific guesser</li>
+                <li><a class="link" href="team/Dogs%2bBound%2bBy%2bRules.html">Dogs Bound By Rules</a> for being the first team to solve a puzzle (Harry Potter in 2m 21s)</li>
+                </li>
+            </ul>
+            The Bigboard, stats (for puzzles and the overall hunt), and list of finishers have all been released
+            and can be accessed using the buttons at the top of the page.
+            <br><br>
+            If you enjoyed our hunt, we would really appreciate it if you considered donating to 
+            <a class="link" href="https://ko-fi.com/hunt20" target="_blank">our Ko-fi</a>
+            page! Donations will be used to pay off the cost of hosting this website ($5 / month) and the domain ($12). 
+            <br><br>
+            If you would like your team to be anonymized/removed from this wrapup, please let us know by emailing us.
+        </p>
+        <p>Note: This wrap-up is written from Ethan's perspective. </p>
+        <h3 id="goals">Goals</h3>
+        <h4 id="difficulty">Difficulty and Size</h4>
+        <p>Vinhan and I started seriously thinking about Hunt20 again back in January of 2021. We were mildly
+            constrained in number of puzzles by our name (lol), but we
+            wanted our hunt to more difficult than it was previously. We participated in many other hunts and enjoyed
+            the difficulty of <a href="https://puzzlehunt.club.cc.cmu.edu/" target="_blank" class="link">CMU</a> and <a
+                href="https://paradoxpuzzlehunt.com/" target="_blank" class="link">Paradox</a> puzzlehunt.
+            Based on our schedules, we had to either start right before or right after Galactic Puzzle Hunt, which
+            limited difficulty, as anything too hard
+            would burn out people before GPH or would be too difficult to complete after (what we presumed to be)
+            another great hunt. 
+            <br><br>
+            We also knew that we had some puzzlers that would still be new to puzzling - for example we advertised to
+            our school friends for the original Hunt20 and knew that a couple of them would be coming back
+            for this hunt (though not participating in any other hunts in between). Though we didn't want to cater
+            hunt to them, we wanted all teams to have the experience of solving a couple of puzzles. 
+            <br><br>
+            We settled on a two-round hunt that would get more difficult, with difficulty around DP, DaroCaro, or CMU. We wanted teams
+            to be able to solo the hunt, so we didn't want to have any giant puzzles that required lots of brute force work.
+        </p>
+        <h4 id="quality">Quality</h4>
+        <p>Looking back at our first hunt, the puzzles are definitely not something I am proud of now. We had errors in
+            couple of puzzles, misused (or did not use) flavortext, and boring mechanics. Many of these
+            issues would be something fixed by
+            having more experienced testsolvers <strike>or honestly, not even running our first hunt and getting more practice</strike>, but in the past,
+            Vinhan and I were quite inexperienced puzzlers (I had only completed CS50x and both of us had done
+            Copuzzle). We didn't realize the size of the puzzling world,
+            and without that knowledge, our puzzles suffered. This time around, I was able to connect with some more
+            experienced teams to testsolve, and for that, I am
+            deeply grateful.
+            <br><br>
+            One of the first places I looked when I started thinking about Hunt20 again was 
+            last year's feedback form. Our first hunt was very rough, but I really appreciate the 
+            feedback teams gave us on puzzles and hunt organization - it really opened our eyes 
+            on how to improve. 
+            <br><br>If you were wondering where last year's hunt was, I actually deleted last year's website.
+            I didn't want anyone to find that hunt and decide not to participate 
+            in this year's because of how low quality our previous hunt was. Trust me: it's not something worth looking at.
+            <br><br>
+            Something that I wish I had was more experienced writers/puzzlers in general on the team. Due of lack of time,
+            Vinhan unfortunately couldn't write any puzzles this year
+            which meant the variety of puzzles produced wouldn't have been as widespread (in terms of theming,
+            knowledge, mechanics, etc.) as if there were more writers. Perhaps unsurprisingly, writing 19 puzzles for one hunt is difficult. 
+            <br><br>
+            Finally, writing puzzles without any Among Us or COVID references was very important to me 😛
+        </p>
+        <h4 id="hints1">Hints</h4>
+        <p>After our first hunt, I disliked punishing teams for asking hints. Last year's Gotta Catch 'em All was pretty much unfair
+            without the hint, and I didn't want anyone
+            to feel stuck, yet pressured not to reach out for help in fear of losing points. Further, I aimed to have
+            freeform hints, as I felt that freeform hints
+            made hunts much more fun for both solvers and hint responders. 
+            <br><br>
+            Even though our team was only 2 people, we were hoping that our relatively 'easier' puzzles would mean less
+            teams would be asking hints, and that we would be able to answer them
+            in a timely manner of a couple minutes (not counting when we were both sleeping). Further, we only released
+            hints 2 per day, which we felt was a reasonable number to answer.
+        </p>
+        <h4 id="style">Hunt Style</h4>
+        <p>Puzzle unlocks were pretty much linear - completing one puzzle would unlock another. We aimed to have 
+            unlocks alternate between 'easy' and 'difficult' so that teams had a larger variety, did not only skip 
+            the difficult puzzles, and didn't hit a solid wall. We based difficulty off of solve times of our testsolvers. 
+            <br><br>
+            We are very happy that we made the change from Wix / Google Forms to gph-site, as it's a lot more elegant and solver-friendly. 
+        </p>
+
+        <h3 id="writing">Writing</h3>
+        <h4 id="theme">Theme and Story</h4>
+        <p>One of the first themes we discussed was books, and we decided to stick with the concept. The plot twist to
+            go back in time to save the dinosaurs came up
+            after I was writing the first version of the metapuzzle, a crossword, where I had one answer which was
+            SAUROPOD. The word stuck with me, and I wanted to somehow
+            incorporate it into the story, which then turned into the dinosaur story we have now. Although I later
+            rewrote the first meta many times, the dinosaur theme never left. It
+            felt only natural to start out with young adult books and transition to children's books to symbolize 'going
+            back in time'. Further, crayons seemed to be thematic to the children's theme (for the art).
+            <br><br>We knew that many puzzlers would not be familiar with the books we chose, so while theming was important,
+            we ensured that all book-content would be easily searchable. 
+        </p>
+        <h4 id="puzzles">Puzzles</h4>
+        <p>I had a few unused mechanics from the first iteration of Hunt20, but there were a lot of other
+            ideas that I needed to develop.
+            I looked at pretty much all the puzzles I could find from past hunts, the <span
+                style='white-space: nowrap;'><a href="https://devjoe.appspot.com/huntindex/" target="_blank"
+                    class="link">MIT Mystery Hunt Index</a>,</span>
+            and the <span style='white-space: nowrap;'><a href="https://puzzling.stackexchange.com/" class="link"
+                    target="_blank">Puzzling
+                    StackExchange</a></span>, which were all valuable resources. Another read I liked is the <span
+                style='white-space: nowrap;'><a href="http://web.mit.edu/dwilson/www/puzzles/puzzlewriting.html"
+                    target="_blank" class="link">
+                    MIT Puzzle Writing Introduction</a></span>. Due to the small team size (of 2),
+            whenever I had an idea, I pretty much just ran with it. We organized puzzles using Discord and Google
+            Sheets, as I didn't think <a href="https://github.com/galacticpuzzlehunt/puzzlord" target="_blank"
+                class="link">Puzzlord</a>
+            would be needed for us (although it is most definitely a cool and useful tool for larger hunts).
+            <br><br>
+            When writing puzzles, my goal was to have a list of possible answers that fit the meta, then find a
+            corresponding book and mechanic to fit the answer. In actuality though,
+            I ended up having a mechanic and finding an answer to fit it. While this isn't necessarily 'bad', I feel
+            that oftentimes, the answers don't feel like a satisfying conclusion
+            to the puzzle. Even worse, some puzzles answers aren't exactly real world phrases (green paint answers). 
+            Further, we made the decision to limit titles to just the book names, which potentially
+            caused red herrings as puzzles didn't always deal with the book information, instead
+            just using character names or references to the books. We debated changing the names to all the puzzles, but we felt
+            the hunt was more thematically strong in its current state.
+            <br><br>
+            Lastly, I added 'Keep going!' messages to allow solvers to check nearly all related cluephrases 
+            that could have possibly been extracted while solving. While I can't see the number of submissions of these
+            cluephrases, I hope that they helped!
+        </p>
+
+        <h4 id="accessibility">Accessibility</h4>
+        <p>
+        When solving, I love it when I'm able to smoothly copy a puzzle to a Google Sheets / other medium to work in. We aimed to have a 'copy to clipboard' button
+        or Google Sheets equivalent
+        for all puzzles that were not easily copyable, which we were able to accomplish (though it led to some errors when testsolving, when we would only change 
+        the version on the website - definitely something we will remember to take note of in the future). Another tool we wish we implemented
+        was DaroCaro's 'drawing' tool or something similar, but we just didn't have the time. 
+        <br><br>For Google Sheets copies, if you click the little arrow next to the sheet on the bottom, click "Copy to" then "Existing spreadsheet",
+        you can copy all the formatting in its original state to a sheet that you/your team have been working on. We had some teams 
+        comment that border formatting got messed up when copying, and this is the solution!
+        <br><br>Puzzles were intended to be seen on a desktop, but we did create override styles to allow them to be solvable on mobile as well. It's really nice
+        to be able to pull out my phone when I'm away from my computer to take a look at some puzzles. There was at least one team 
+        that completed the hunt entirely from their phone :)
+        <br><br>We didn't consider solvers who wanted to print puzzles out, and that is something we will pay more attention to if we run the hunt again. However, creating full 
+        blown PDFs for each puzzle can be difficult, especially maintaining consistency, as errata needs to be fixed in 3 different places. 
+        <br><br>I am happy to say that Treasure Island's playable version was well-received though! Perhaps a playable triangular Slitherlink would have been nice as well. 
+        <br><br>We received emails concerning colorblind accessibility and those who are visually impaired. I did my best to include alt text and colorblind friendly 
+        versions on as many puzzles
+        as possible without spoiling anything, but some puzzles are unfortunately not solvable if one is visually impaired. 
+        </p>
+        <h4 id="testsolving">Testsolving</h4>
+        <p>
+            Our first hunt severely lacked experienced testsolvers and we did not want to fall into that same hole again. Unfortunately, due to our small team size, 
+            we were only able to test puzzles in their initial state once or twice, with Vinhan (and occasionally Ty and Preston). We were able to have 3 full hunt playthroughs however, 
+            thanks to team Please Clap, Puzzle Hunt CMU, UMD Puzzle Club. Vinhan and I were in Discord calls with these teams, muted, and watched their thought process.
+            Each full-hunt testsolve gave us a lot of insight into how teams solved our puzzles and
+            led to improvements in puzzle clarity. It was also a lot of fun watching teams get a-ha's and find break-ins that we intended them to find. 
+            <br><br>When solving, we specifically instructed these teams not to speedrun our puzzles. Rather we requested all team members to solve each puzzle together
+            to maximize the number of eyes on each puzzle, for feedback/error checking purposes. Through these playtests, on average, teams finished the hunt
+            in around 3-4 hours and finished off the rest of the puzzles they skipped in ~2 hours. 
+            <br><br>The DaroCaro team also helped test our puzzles, though not in the traditional
+            "full hunt playthrough", rather solving puzzles as they had time. Their feedback (as well as all the other teams) is
+            greatly appreciated!
+            
+        <p>
+
+        <h3 id="reflections">Reflections</h3>
+        <h4 id="general">General</h4>
+        <p>
+            Overall I'm very proud of the hunt that Vinhan and I 
+            were able to make. We have most definitely improved from our first hunt, and while this hunt wasn't perfect, it was an educational experience to help 
+            us become better puzzlers and writers. I had a lot of fun seeing people solve our puzzles on Google Sheets, 
+            watching our Discord channel being flooded with submissions, 
+            and answering hints. 
+            <br><br>I'm still amazed that Vinhan and I were able to construct this all. Back in January, all I had were a couple of puzzles on a Google Sheets;
+            I had no idea to how to use gph-site or anything, and I was extremely skeptical that I'd be able to learn. As I started to load puzzles
+            and hosted the website to a custom domain, I was amazed that everything was coming together. 
+            <br><br>I made one change to the leaderboard a couple of hours after the hunt started - adding the "20" symbol 
+               to teams that completed all 20 puzzles. This seemed to encourage a couple of teams to go back and solve (or backsolve) the
+               final puzzles they skipped to get the elusive 20 :)
+        </p>
+         <h4 id="puzzlesref">Puzzles</h4>
+         <p>
+         Though I wanted the hunt to be strongly themed to books, most puzzle content did not
+            referenece book content at all, besides some flavortext references. 
+            I'm still happy with the final product, regardless, as puzzles that rely on endlessly searching fandom pages does not seem fun. 
+            <br><br>Based on "fun"-ness, the highest ranked puzzle was the second meta, Jurassic Mark, the second highest Where the Wild Things Are, and
+         tied for third, The Three Little Pigs and The Very Hungry Caterpillar. The second round puzzles were ranked significantly higher in "fun"-ness than the first round, which was
+         expected as the first round is also relatively easier (and has less layers). 
+         <br><br>Most people's least favorite puzzle was The Lorax, mostly because they didn't solve it (or backsolved). Matilda was a very mixed 
+         bag - some people put it as their favorite puzzle, while others as their least favorite (likely due to the inelegancies in the X and DISCO->DISCOUNT. A lot of teams got 
+         stuck on the cluephrase as well).
+         <br><br>I think better presentation would have improved a lot of team's experience with some of the puzzles - for example, many people were
+         stuck on PRESTO NEREID (or just PRESTO) in The Hunger Games. Making some sort of visual that better clued you were looking for a 6 letter word
+         that was made up of the combination of PRESTO and NEREID probably would have improved the solving experience. Further, the X clue in Matilda was quite
+         unfortunate, and perhaps a different colored X could have helped it slightly. There was the option to clue SEXT -> SEXTANT, but we decided against 
+         that as it didn't seem very appropriate for a round based on children's books. There was also some complaints about image quality in I Spy (not being 
+         able to zoom in easily), and putting the images individually into a table may have been more effective. 
+         I am not sure if this would take a long time to load though. 
+
+         </p>
+
+        <h4 id="hints2">Hints</h4>
+        <p>
+            We ended up receiving <span id="hintreq"></span> hint requests (not counting hint responses/additional help through email, which I'd estimate 
+            at around 150 emails). We were very generous
+            with hints, allowing teams to reply back to the hint email to get additional help at no penalty.
+            If teams ran out of hints, we would grant them more if they asked(provided that they were not abusing the system).
+            We wanted as many teams as possible to experience the feeling of solving a meta (or even the entire hunt!),
+            which also explains why we extended the hunt past the normal weekend. 
+
+            <br><br>
+            For the first 3 days, during the day, we were able to stay on top of hint requests, usually answering them within 3 minutes. 
+            Email responses were a little slower
+            though, as I didn't always get notifications for the emails :( However, for the time period between ~4am and ~8am ET, both Vinhan and I were asleep so no hints were answered.
+            On Saturday and Sunday, I 'volunteered' myself to stay up this late (4am) to answer hints. On Saturday ~8am, Vinhan and I 
+            woke up to 25 hint requests, and on Sunday, luckily only 12. In the first 3 days, the longest a team went without a response was 4 hours. 
+            For most US based solvers, the hint response speed was fine, but for others, the time discrepancy is unfortunate.
+            We had written "prewritten" hints
+            for all the puzzles, but as time passed, many teams had asked very similar questions so we were able to copy and paste from
+            previous responses (which led to the speediness).
+
+            <br><br>After Monday though, hint response speed slowed down slightly as Vinhan and I had other commitments. 
+            I decided to go to bed at a more reasonable 3am. One "funny" story is that I actually fell asleep in the middle of answering a hint in 
+            bed, leaving a team hanging for 2 hours while Vinhan was away :( I'll definitely need to catch up on some zz's before GPH :')
+
+            <br><br>Teams generally agreed that the hints were helpful, though perhaps sometimes a little *too* helpful. We tried not to spoil any 
+            major aha's, but I do agree we often gave hints to help solvers with not just the immediate step, but step(s) after. In my opinion, I would 
+            rather have a hint be little too helpful than not helpful enough, as I personally feel really bad asking hinters for help again and again on the
+            same puzzle. I'm sure other teams may disagree with me here though. 
+
+            <div class="container justify-content-center" style="width:60vw"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+               <canvas id="HintsChart" width="622" height="311" style="display: block; width: 622px; height: 200px;" class="chartjs-render-monitor"></canvas>
+               <script>
+               let t = 527;
+               let v = 53;
+               document.getElementById("hintreq").innerHTML = t;
+               const hdata = {
+                  labels: [
+                     'Ethan',
+                     'Vinhan'
+                  ],
+                  datasets: [{
+                     label: 'Hints Answered',
+                     data: [t-v, v],
+                     backgroundColor: [
+                        'rgb(54, 162, 235)',
+                        'rgb(255, 99, 132)',
+                        
+                     ],
+                     hoverOffset: 4,
+                  }]
+                  };
+
+                  var ctx = document.getElementById("HintsChart");
+                  var HintChart = new Chart(ctx, {
+                  responsive: true,
+                  maintainAspectRatio: true,
+                  type: "pie",
+                  data: hdata,
+                  options: {
+                     title: {
+                        display:true,
+                        text: `Total Hints Answered: ${t}`,
+                        fontSize: 18,
+                        fontColor: "#2565AE"
+                     },
+                     responsive: true,
+                     legend: {
+                     display: true
+                     },
+                     tooltips: {
+                     mode: 'index',
+                     }
+                  }
+               });
+
+               </script>
+            </div>
+            <br>
+             <div class="container justify-content-center" style="width:60vw"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+            <canvas id="perPuzzleChart" width="636" height="318" style="display: block; width: 636px; height: 318px;" class="chartjs-render-monitor"></canvas>
+            <script>
+               const pdata = {
+                  labels: [
+                     'Harry Potter',
+                     'The Maze Runner',
+                     'Lord of the Rings',
+                     'I am Number Four',
+                     'Treasure Island',
+                     'Miss Peregrine\'s Home',
+                     'Six of Crows',
+                     'The Hunger Games',
+                     'Divergent',
+                     'META: Percy Jackson',
+                     'Matilda',
+                     'The Very Hungry Caterpillar',
+                     'The Lorax',
+                     'I Spy',
+                     'Frog and Toad',
+                     'The Giving Tree',
+                     'The Three Little Pigs',
+                     'The Ugly Duckling',
+                     'Where the Wild Things Are',
+                     'META: Jurassic Mark',
+                  ],
+                  datasets: [{
+                     label: 'Hints',
+                     data: [12, 3, 11, 43, 2, 18, 11, 47, 21, 4, 37, 19, 50, 61, 28, 52, 5, 52, 20, 24],
+                     backgroundColor: "#007bff",
+                  }]
+                  };
+
+                  var ctx = document.getElementById("perPuzzleChart");
+        var perPuzzle = new Chart(ctx, {
+          responsive: true,
+          maintainAspectRatio: true,
+          type: "bar",
+          data: pdata,
+          options: {
+            title: {
+              display: true,
+              text: "Hints per Puzzle",
+              fontSize: 18,
+              fontColor: "#2565AE",
+            },
+            responsive: true,
+            legend: {
+              display: false
+            },
+            tooltips: {
+              mode: 'index'
+            }
+          }
+        });
+
+            </script>
+            </div>
+            I had a ton of fun answering hints and really enjoyed reading creative hints (shoutout to Spin My Hovercraft
+            for writing entire poems as hint requests). We had a couple of memes in hint requests, and I loved when teams
+            "talked" to me on the shared Google Sheets. Seeing teams find our aha's was very rewarding.
+            It made the process of staring at my computer while I was on hint duty 
+            for hours at a time more bearable :)
+            <div style="display: block;overflow: auto;width:auto;width:100%">
+            <img src="static/images/meme1.png" width="200px" style="float:left">
+            <img src="static/images/meme2.png" width="200px" style="float:left">
+            <img src="static/images/meme3.png" width="200px" style="float:left">
+            <img src="static/images/meme4.png" width="200px" style="float:left">
+            <img src="static/images/meme5.png" width="400px" style="float:left">
+            <img src="static/images/meme7.png" width="300px" style="float:left">
+            <img src="static/images/meme8.png" width="300px" style="float:left">
+            <img src="static/images/meme10.png" width="400px" style="float:left">
+            <img src="static/images/meme6.png" width="200px" style="float:left">
+
+            <img src="static/images/meme9.png" width="500px" style="float:left">
+            <img src="static/images/meme12.png" width="300px" style="float:left">
+            </div>
+            <a class="link" href="https://www.youtube.com/watch?v=ml7bK1jg69I" target="_blank">(The video in question)</a>
+        </p>
+
+        <h4 id="difficulty2">Difficulty</h4>
+        <p>Going in, we expected that competitive teams would finish within a few hours, then more casual teams would
+            continue solving throughout the week. This worked exactly as planned - we had many teams finish quickly, but
+            keeping the hunt open past the weekend allowed an additional <b>80</b> teams to finish past the "typical" 6PM Sunday end (for a 2 day weekend hunt). 
+            We also had over 160 teams register past the hunt start date (and many of them completing the hunt!), and 49 teams that registered past 6PM on Sunday (the 18th). 
+
+            <br><br>We receieved a couple of comments saying that the difficulty scale was great, perfect for a solo hunt and a good warmup to GPH
+            for both casual / competitive teams. On average, puzzlers felt the hunt was slightly easier than expected (based on intuition and advertised difficulty), but
+            we think that's perfectly fine - we hope teams felt good that they were solving puzzles! There were a couple of teams that told us
+            that this was their first time they completed a puzzlehunt, congrats to them!
+
+
+            <br><br>Here's a chart comparing the relative length/difficulty of our hunt, 
+            compared to some recent hunts. Data and chart came from <a href="https://huntinality.com/wrapup#hunt-scope-and-difficulty" target="_blank">Huntinality's wrapup</a>.
+            <br>
+            <div class="container justify-content-center" style="width:60vw"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+               <canvas id="HuntComparisonChart" width="622" height="311" style="display: block; width: 622px; height: 311px;" class="chartjs-render-monitor"></canvas>
+               <script>
+               var hunt_name = ["DP Hunt 2020", "Paradox", "Hunt20", "DaroCaro", "CMU Spring 2021", "Puzzle Potluck 3", "Huntinality 2021",
+               "Puzzles are Magic", "CRUMS 2020", "REDDOT 2020", "UMD 2021", "Teammate 2020"]
+               var colors = [
+                     "#fd7e14", // Orange
+                     "#cccccc", //Paradox
+                     "#7dc9ff", //Hunt20 
+                     "#b19cd9", // Baby Blue
+                     "#004691", // Blue
+                     "#343a40", // Black
+                     "#6f42c1", // Purple
+                     "#f51bf1", // Pink
+                     "#ad814e", // Brown
+                     "#dc3545", // Red
+                     "#f7da1e", // Yellow
+                     "#28a745", // Green
+               ];
+               var num_puzzles = [25, 12, 20, 20, 22, 21, 17, 16, 8, 21, 25, 45];
+               var fastest_finish = [0.98, 1.9, 2.4, 2.53, 2.58, 4.2, 4.38, 4.63, 6.02, 11.65, 15.4, 27.28];
+               //                       change ---v--- that
+               var two_day_finishers = [223, 126, 101, 211, 120, 118, 86, 85, 34, 21, 22, 5];
+               var bubbleDatasets = []
+               for (i = 0; i < hunt_name.length; i++) {
+                     bubbleDatasets.push({
+                        label: hunt_name[i],
+                        data: [{r: num_puzzles[i], x: fastest_finish[i], y: two_day_finishers[i]}],
+                        backgroundColor: colors[i],
+                     });
+               }
+               var ctx = document.getElementById("HuntComparisonChart");
+               var HuntComparisonChart = new Chart(ctx, {
+                  responsive: true,
+                  maintainAspectRatio: true,
+                  type: "bubble",
+                  data: {
+                     datasets: bubbleDatasets,
+                  },
+                  options: {
+                     responsive: true,
+                     legend: {
+                     display: true
+                     },
+                     scales: {
+                     xAxes: [{
+                        ticks: {
+                           beginAtZero: true,
+                        },
+                        scaleLabel: {
+                           display: true,
+                           labelString: "Fastest Finish in Hours",
+                           fontStyle: "bold",
+                        },
+                     }],
+                     yAxes: [{
+                        ticks: {
+                           beginAtZero: true,
+                        },
+                        scaleLabel: {
+                           display: true,
+                           labelString: "Finishers in First 2 Days",
+                           fontStyle: "bold",
+                        },
+                     }]
+                     },
+                     tooltips: {
+                     displayColors: false,
+                     callbacks: {
+                        title: function(tooltipItems, data) {
+                           return hunt_name[tooltipItems[0].datasetIndex];
+                        },
+                        label: function(tooltipItem, data) {
+                           var out = ["# Puzzles: " + num_puzzles[tooltipItem.datasetIndex],
+                                    "Fastest Finish: " + fastest_finish[tooltipItem.datasetIndex] + " hours",
+                                    "# Finishers in First 2 Days: " + two_day_finishers[tooltipItem.datasetIndex]];
+                           return out;
+                        },
+                     },
+                     },
+                  }
+               });
+               </script>      
+            </div>
+
+            I think it's worth noting that
+            the next fastest team after Cardinality (<a href="team/ClueCurio.html" target="_blank">ClueCario</a>) 
+            took 3 hours 44 minutes (1hr 20m after Cardinality's finish). In contrast, the time between completion for the second, third, fourth, and fifth
+            place teams was only about 6 minutes.
+            When Cardinality finished our hunt, the next fastest team still
+            had 2 puzzles to complete before even <i>unlocking</i> the final meta (which puts into perspective 
+            how fast their team is!). 
+
+            <br><br>Here's a graph of all the finishers by time.
+            <div class="container justify-content-center" style="width:60vw"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+               <canvas id="finishChart" width="622" height="311" style="display: block; width: 622px; height: 200px;" class="chartjs-render-monitor"></canvas>
+               
+               <script>
+               var ctx = document.getElementById("finishChart").getContext("2d");
+
+var myChart = new Chart(ctx, {
+  type: 'line',
+  options: {
+    scales: {
+      xAxes: [{
+        type: 'time',
+        time: {
+           parser: "MMM DD, hh:mm",
+            unit: 'hour',
+            unitStepSize: 12,
+            displayFormats:{
+              'minute': 'HH:mm',
+              'hour': 'MMM DD HH:mm',
+           }
+        }
+      }]
+    }
+  },
+  data: {
+    labels: ["Jul 16, 18:00","Jul 16, 20:24","Jul 16, 21:44","Jul 16, 21:49","Jul 16, 21:55","Jul 16, 22:02","Jul 16, 22:09","Jul 16, 22:14","Jul 16, 22:16","Jul 16, 22:26","Jul 16, 22:30","Jul 16, 22:32","Jul 16, 22:35","Jul 16, 22:47","Jul 16, 22:49","Jul 16, 22:54","Jul 16, 23:29","Jul 16, 23:48","Jul 17, 00:12","Jul 17, 00:21","Jul 17, 00:27","Jul 17, 00:35","Jul 17, 00:42","Jul 17, 00:47","Jul 17, 00:53","Jul 17, 01:03","Jul 17, 01:11","Jul 17, 01:12","Jul 17, 01:44","Jul 17, 01:49","Jul 17, 02:05","Jul 17, 02:06","Jul 17, 02:10","Jul 17, 02:24","Jul 17, 02:37","Jul 17, 02:47","Jul 17, 02:55","Jul 17, 03:07","Jul 17, 03:15","Jul 17, 03:26","Jul 17, 03:42","Jul 17, 03:55","Jul 17, 04:25","Jul 17, 05:54","Jul 17, 06:42","Jul 17, 08:41","Jul 17, 09:12","Jul 17, 10:23","Jul 17, 10:24","Jul 17, 10:57","Jul 17, 11:07","Jul 17, 12:58","Jul 17, 13:28","Jul 17, 14:24","Jul 17, 14:47","Jul 17, 14:55","Jul 17, 15:19","Jul 17, 15:21","Jul 17, 15:33","Jul 17, 15:44","Jul 17, 15:54","Jul 17, 17:44","Jul 17, 18:01","Jul 17, 18:26","Jul 17, 18:35","Jul 17, 18:38","Jul 17, 18:46","Jul 17, 19:17","Jul 17, 19:33","Jul 17, 19:43","Jul 17, 20:01","Jul 17, 21:00","Jul 17, 21:43","Jul 17, 21:47","Jul 17, 22:20","Jul 17, 23:15","Jul 17, 23:32","Jul 17, 23:37","Jul 18, 00:10","Jul 18, 01:15","Jul 18, 01:30","Jul 18, 01:54","Jul 18, 02:01","Jul 18, 02:06","Jul 18, 02:37","Jul 18, 05:38","Jul 18, 06:19","Jul 18, 08:02","Jul 18, 08:06","Jul 18, 09:02","Jul 18, 10:08","Jul 18, 10:24","Jul 18, 10:27","Jul 18, 10:54","Jul 18, 12:23","Jul 18, 15:32","Jul 18, 16:48","Jul 18, 17:00","Jul 18, 17:01","Jul 18, 17:26","Jul 18, 17:40","Jul 18, 17:58","Jul 18, 18:48","Jul 18, 19:00","Jul 18, 20:16","Jul 18, 20:28","Jul 18, 20:29","Jul 18, 21:20","Jul 18, 21:59","Jul 18, 22:14","Jul 18, 23:31","Jul 19, 00:20","Jul 19, 03:46","Jul 19, 03:52","Jul 19, 03:56","Jul 19, 05:12","Jul 19, 11:42","Jul 19, 12:48","Jul 19, 13:02","Jul 19, 13:53","Jul 19, 15:13","Jul 19, 16:58","Jul 19, 17:22","Jul 19, 17:48","Jul 19, 19:41","Jul 19, 19:48","Jul 19, 20:56","Jul 19, 21:50","Jul 19, 23:21","Jul 19, 23:54","Jul 20, 00:32","Jul 20, 01:09","Jul 20, 01:49","Jul 20, 02:13","Jul 20, 02:29","Jul 20, 02:38","Jul 20, 03:26","Jul 20, 09:43","Jul 20, 10:05","Jul 20, 10:30","Jul 20, 11:15","Jul 20, 11:58","Jul 20, 12:12","Jul 20, 12:28","Jul 20, 14:53","Jul 20, 17:03","Jul 20, 17:09","Jul 20, 17:27","Jul 20, 18:39","Jul 20, 19:36","Jul 20, 19:41","Jul 20, 19:55","Jul 20, 19:58","Jul 20, 22:21","Jul 20, 22:31","Jul 21, 02:51","Jul 21, 03:30","Jul 21, 05:34","Jul 21, 13:24","Jul 21, 18:14","Jul 21, 19:21","Jul 21, 19:32","Jul 21, 20:57","Jul 21, 21:09","Jul 21, 21:57","Jul 21, 22:30","Jul 22, 00:19","Jul 22, 01:05","Jul 22, 02:58","Jul 22, 03:05","Jul 22, 05:13","Jul 22, 05:51","Jul 22, 08:03","Jul 22, 11:55","Jul 22, 12:37","Jul 22, 13:40","Jul 22, 13:47","Jul 22, 15:46","Jul 22, 16:15","Jul 22, 16:24","Jul 22, 17:09","Jul 22, 17:35","Jul 22, 18:00"], // K1
+    datasets: [{
+      label: 'Finishers',
+      fill: false,
+      data: [{t: 'Jul 16, 18:00', y: 0},{t: 'Jul 16, 20:24', y: 1},{t: 'Jul 16, 21:44', y: 2},{t: 'Jul 16, 21:49', y: 3},{t: 'Jul 16, 21:55', y: 4},{t: 'Jul 16, 22:02', y: 5},{t: 'Jul 16, 22:09', y: 6},{t: 'Jul 16, 22:14', y: 7},{t: 'Jul 16, 22:16', y: 8},{t: 'Jul 16, 22:26', y: 9},{t: 'Jul 16, 22:30', y: 10},{t: 'Jul 16, 22:32', y: 11},{t: 'Jul 16, 22:35', y: 12},{t: 'Jul 16, 22:47', y: 13},{t: 'Jul 16, 22:49', y: 14},{t: 'Jul 16, 22:54', y: 15},{t: 'Jul 16, 23:29', y: 16},{t: 'Jul 16, 23:48', y: 17},{t: 'Jul 17, 00:12', y: 18},{t: 'Jul 17, 00:21', y: 19},{t: 'Jul 17, 00:27', y: 20},{t: 'Jul 17, 00:35', y: 21},{t: 'Jul 17, 00:42', y: 22},{t: 'Jul 17, 00:47', y: 23},{t: 'Jul 17, 00:53', y: 24},{t: 'Jul 17, 01:03', y: 25},{t: 'Jul 17, 01:11', y: 26},{t: 'Jul 17, 01:12', y: 27},{t: 'Jul 17, 01:44', y: 28},{t: 'Jul 17, 01:49', y: 29},{t: 'Jul 17, 02:05', y: 30},{t: 'Jul 17, 02:06', y: 31},{t: 'Jul 17, 02:10', y: 32},{t: 'Jul 17, 02:24', y: 33},{t: 'Jul 17, 02:37', y: 34},{t: 'Jul 17, 02:47', y: 35},{t: 'Jul 17, 02:55', y: 36},{t: 'Jul 17, 03:07', y: 37},{t: 'Jul 17, 03:15', y: 38},{t: 'Jul 17, 03:26', y: 39},{t: 'Jul 17, 03:42', y: 40},{t: 'Jul 17, 03:55', y: 41},{t: 'Jul 17, 04:25', y: 42},{t: 'Jul 17, 05:54', y: 43},{t: 'Jul 17, 06:42', y: 44},{t: 'Jul 17, 08:41', y: 45},{t: 'Jul 17, 09:12', y: 46},{t: 'Jul 17, 10:23', y: 47},{t: 'Jul 17, 10:24', y: 48},{t: 'Jul 17, 10:57', y: 49},{t: 'Jul 17, 11:07', y: 50},{t: 'Jul 17, 12:58', y: 51},{t: 'Jul 17, 13:28', y: 52},{t: 'Jul 17, 14:24', y: 53},{t: 'Jul 17, 14:47', y: 54},{t: 'Jul 17, 14:55', y: 55},{t: 'Jul 17, 15:19', y: 56},{t: 'Jul 17, 15:21', y: 57},{t: 'Jul 17, 15:33', y: 58},{t: 'Jul 17, 15:44', y: 59},{t: 'Jul 17, 15:54', y: 60},{t: 'Jul 17, 17:44', y: 61},{t: 'Jul 17, 18:01', y: 62},{t: 'Jul 17, 18:26', y: 63},{t: 'Jul 17, 18:35', y: 64},{t: 'Jul 17, 18:38', y: 65},{t: 'Jul 17, 18:46', y: 66},{t: 'Jul 17, 19:17', y: 67},{t: 'Jul 17, 19:33', y: 68},{t: 'Jul 17, 19:43', y: 69},{t: 'Jul 17, 20:01', y: 70},{t: 'Jul 17, 21:00', y: 71},{t: 'Jul 17, 21:43', y: 72},{t: 'Jul 17, 21:47', y: 73},{t: 'Jul 17, 22:20', y: 74},{t: 'Jul 17, 23:15', y: 75},{t: 'Jul 17, 23:32', y: 76},{t: 'Jul 17, 23:37', y: 77},{t: 'Jul 18, 00:10', y: 78},{t: 'Jul 18, 01:15', y: 79},{t: 'Jul 18, 01:30', y: 80},{t: 'Jul 18, 01:54', y: 81},{t: 'Jul 18, 02:01', y: 82},{t: 'Jul 18, 02:06', y: 83},{t: 'Jul 18, 02:37', y: 84},{t: 'Jul 18, 05:38', y: 85},{t: 'Jul 18, 06:19', y: 86},{t: 'Jul 18, 08:02', y: 87},{t: 'Jul 18, 08:06', y: 88},{t: 'Jul 18, 09:02', y: 89},{t: 'Jul 18, 10:08', y: 90},{t: 'Jul 18, 10:24', y: 91},{t: 'Jul 18, 10:27', y: 92},{t: 'Jul 18, 10:54', y: 93},{t: 'Jul 18, 12:23', y: 94},{t: 'Jul 18, 15:32', y: 95},{t: 'Jul 18, 16:48', y: 96},{t: 'Jul 18, 17:00', y: 97},{t: 'Jul 18, 17:01', y: 98},{t: 'Jul 18, 17:26', y: 99},{t: 'Jul 18, 17:40', y: 100},{t: 'Jul 18, 17:58', y: 101},{t: 'Jul 18, 18:48', y: 102},{t: 'Jul 18, 19:00', y: 103},{t: 'Jul 18, 20:16', y: 104},{t: 'Jul 18, 20:28', y: 105},{t: 'Jul 18, 20:29', y: 106},{t: 'Jul 18, 21:20', y: 107},{t: 'Jul 18, 21:59', y: 108},{t: 'Jul 18, 22:14', y: 109},{t: 'Jul 18, 23:31', y: 110},{t: 'Jul 19, 00:20', y: 111},{t: 'Jul 19, 03:46', y: 112},{t: 'Jul 19, 03:52', y: 113},{t: 'Jul 19, 03:56', y: 114},{t: 'Jul 19, 05:12', y: 115},{t: 'Jul 19, 11:42', y: 116},{t: 'Jul 19, 12:48', y: 117},{t: 'Jul 19, 13:02', y: 118},{t: 'Jul 19, 13:53', y: 119},{t: 'Jul 19, 15:13', y: 120},{t: 'Jul 19, 16:58', y: 121},{t: 'Jul 19, 17:22', y: 122},{t: 'Jul 19, 17:48', y: 123},{t: 'Jul 19, 19:41', y: 124},{t: 'Jul 19, 19:48', y: 125},{t: 'Jul 19, 20:56', y: 126},{t: 'Jul 19, 21:50', y: 127},{t: 'Jul 19, 23:21', y: 128},{t: 'Jul 19, 23:54', y: 129},{t: 'Jul 20, 00:32', y: 130},{t: 'Jul 20, 01:09', y: 131},{t: 'Jul 20, 01:49', y: 132},{t: 'Jul 20, 02:13', y: 133},{t: 'Jul 20, 02:29', y: 134},{t: 'Jul 20, 02:38', y: 135},{t: 'Jul 20, 03:26', y: 136},{t: 'Jul 20, 09:43', y: 137},{t: 'Jul 20, 10:05', y: 138},{t: 'Jul 20, 10:30', y: 139},{t: 'Jul 20, 11:15', y: 140},{t: 'Jul 20, 11:58', y: 141},{t: 'Jul 20, 12:12', y: 142},{t: 'Jul 20, 12:28', y: 143},{t: 'Jul 20, 14:53', y: 144},{t: 'Jul 20, 17:03', y: 145},{t: 'Jul 20, 17:09', y: 146},{t: 'Jul 20, 17:27', y: 147},{t: 'Jul 20, 18:39', y: 148},{t: 'Jul 20, 19:36', y: 149},{t: 'Jul 20, 19:41', y: 150},{t: 'Jul 20, 19:55', y: 151},{t: 'Jul 20, 19:58', y: 152},{t: 'Jul 20, 22:21', y: 153},{t: 'Jul 20, 22:31', y: 154},{t: 'Jul 21, 02:51', y: 155},{t: 'Jul 21, 03:30', y: 156},{t: 'Jul 21, 05:34', y: 157},{t: 'Jul 21, 13:24', y: 158},{t: 'Jul 21, 18:14', y: 159},{t: 'Jul 21, 19:21', y: 160},{t: 'Jul 21, 19:32', y: 161},{t: 'Jul 21, 20:57', y: 162},{t: 'Jul 21, 21:09', y: 163},{t: 'Jul 21, 21:57', y: 164},{t: 'Jul 21, 22:30', y: 165},{t: 'Jul 22, 00:19', y: 166},{t: 'Jul 22, 01:05', y: 167},{t: 'Jul 22, 02:58', y: 168},{t: 'Jul 22, 03:05', y: 169},{t: 'Jul 22, 05:13', y: 170},{t: 'Jul 22, 05:51', y: 171},{t: 'Jul 22, 08:03', y: 172},{t: 'Jul 22, 11:55', y: 173},{t: 'Jul 22, 12:37', y: 174},{t: 'Jul 22, 13:40', y: 175},{t: 'Jul 22, 13:47', y: 176},{t: 'Jul 22, 15:46', y: 177},{t: 'Jul 22, 16:15', y: 178},{t: 'Jul 22, 16:24', y: 179},{t: 'Jul 22, 17:09', y: 180},{t: 'Jul 22, 17:35', y: 181},{t: 'Jul 22, 18:00', y: 181}], // M1
+      pointBackgroundColor: "#a3d9ff",
+      pointBorderWidth: 1,
+      pointHoverRadius: 5,
+      pointHoverBorderWidth: 2,
+      borderWidth: 2,
+      pointHitRadius:10,
+      borderColor: "#56A8E3",
+    }]
+  }
+});
+
+               </script>
+            </div>
+        </p>
+
+        <h3 id="other">Other</h3>
+        <h4 id="future">Future</h4>
+        <p>
+            This site will never be deleted, however in about 9 months (around May), I probably will not renew the
+            domain name. I'm working on converting the site to a static state, and hopefully it will be available permanently at another (free) domain.</a>
+            In all honesty, Vinhan and I don't think we'll have the time to host an entire other Hunt20 - but we will see. There's a lot of fatigue from creating
+            and hosting this hunt. 
+            We plan to still be part of the puzzling community though :)
+        </p>
+
+        <h4 id="credits">Credits</h4>
+        <p>
+            <b>Puzzle writers</b>: Ethan and Ty for <a href="puzzle/treasure-island.html" class="link">Treasure Island</a>
+            <br><b>Testsolvers</b>: Vinhan, Preston, team Please Clap (Jonah, Ben, and Ian), Puzzle Hunt CMU, UMD Puzzle Club (Dawson Do and Ryan Thomas),
+            and DaroCaro (Darren and Caroline)
+            <br><b>Art</b>: Ethan and Vinhan
+            <br><b>Web dev</b>: Ethan
+            <br>
+            <br>A special thanks to Jonah (and the other Please Clap members) for giving us lots of feedback on our puzzles - they were the first 
+            experienced team we tested on and helped me improve puzzles to a much better state.
+            <br><br>Story art mainly consists of traced vector versions of reference images found online. Crayon drawings were drawn by hand, also
+            using reference images.</p>
+        <h4 id="tech">Tech</h4>
+        <p>
+                The website is a fork of <a href="https://github.com/galacticpuzzlehunt/gph-site" target="_blank"
+                class="link">GPH site</a>, which is written in DJango and Python. 
+            GPH-site was amazing to use; it was well documented and easy to pick up, even with little web hosting experience. I had a little bit
+            of HTML/CSS/JS/Python experience in the past, and Django was luckily learn. 
+            The website is hosted using <a href="https://www.pythonanywhere.com/" target="_blank"
+                class="link">PythonAnywhere</a> on the Hacker plan. I load tested
+                 the site using <a class="link" target="_blank" href="https://locust.io/">Locust</a> and found that the
+                 current plan would likely be adequate, even at the time the hunt started (in testing, the site did fine with 1000 concurrent connections).
+                 At the start of the hunt, the site was a little slow to load, but there were luckily no crashes or downtime. 
+
+                 <br><br><a href="https://inkscape.org/" target="_blank"
+                class="link">Inkscape</a>, crayons, and paper were used to create the art (the second round bookshelf / puzzles are handdrawn).
+            <a href="victory.html" class="link" target="_blank"><nobr>Victory page confetti</nobr></a>was used <a
+                href="https://www.cssscript.com/confetti-falling-animation/" target="_blank" class="link">from here</a>. Charts in this wrapup are made
+                with <a class="link" href="https://www.chartjs.org/" target="_blank">ChartJS</a>.
+                <br><br>Treasure Island's 
+                playable version was created with <a href="https://scratch.mit.edu/" class="link" target="_blank">Scratch</a>. Why Scratch?
+                I had lots of experience with it as a kid, and it seemed to be the easiest way to export and change if needed. If there was an error on
+                the grid or something, I could do change it even if I was away from my main computer, and it would automatically update (without me having
+                to manually export or anything).
+        </p>
+
+<h4 id="cheating">Cheating</h4>
+         <p>
+         It's unfortunate that there's an entire section dedicated to cheating, but I feel like it's something
+         I should talk about.
+         <br><br>During the hunt, there were 3 clear instances of cheating. Two teams had created an alternate account
+         and many puzzles within a few minutes. It's understandable if the first 3 puzzles were solved instantly
+         (as a team could have been created right after solving the first 3), though any further would be impossible
+         without prior knowledge of the puzzles ahead. We asked them how they were doing this, and we got no response.
+         The accounts never logged back in after that.
+         <br><br>Secondly, there was a team that had asked for help for our puzzles on Reddit. 
+         They had posted the direct text and a screenshot of the puzzles, hiding the fact that this was from an ongoing hunt/our hunt.
+         While our rules do not <i>explicitly</i> disallow teams from asking public forums, I'd argue it's considered pretty bad sportsmanship
+         and possibly constitues "helping other teams". Further, the specific subreddit this was posted to disallowed 
+         posting "puzzles from ongoing contests".
+         <br><br>We know who did this, based on 
+         publicly available information and timing and have told them not to do this in the future. 
+         <br><br>A case of cheating also appeared in our last hunt, but I won't expand much further as our previous hunt is not something I want to return to. 
+         <p>
+
+        <h3 id="appendix">Appendix</h3>
+
+         <h4 id="advertisements">Advertisements</h4>
+         These came in the form of flag submissions :)
+         <ul>
+            <li>Team Yuki - <a class="link" href="https://www.yukihunt.club/" target="_blank">yukihunt.club</a></li>
+            <li>Team Kevin - <a class="link" href="https://kevinspuzzles.com/" target="_blank">KevinsPuzzles.com</a></li>
+         </ul>
+        <h4 id="guesses">Guesses</h4>
+        <p>Some of our favorite guesses:</p>
+        <style>
+            #guess,
+            #guess li,
+            #guess li ul,
+            #guess li ul li {
+                padding: 0px;
+                margin-top: 0px;
+                margin-bottom: 0px;
+            }
+        </style>
+        <ul id="guess">
+            <li><b>I am Number Four</b>
+                <ul>
+                     <li>BREADWINNER by MCSquareD - <a href="https://huntinality.com/puzzle/wahtaburger" target="_blank">Wrong hunt</a> perhaps? 😉</li>
+                     <li>OKGOOFFWITHTHOSEHOMOPHONESORWHATEVERBUTWHATABOUTEXTRACTION
+                     <br>INTERROBANGMOMENT 
+                     <br>MAYBEISHOULDJUSTGOTOBED 
+                     <br>GOODNIGHTHUNTPEOPLE 
+                     <br>HUNTTWENTYWRITERS 
+                     <br>THISISWHYWESHOULDHAVENOALPHANUMERICCHARACTERSALLOWEDINGUESSESWEARYEMOJI
+                     <br>NON 
+                     <br>DANGIT by no gnus is good gnus
+
+                </ul>
+            </li>
+            <li><b>The Hunger Games</b>
+               <ul>
+                  <li>ETHANPLEASEPUTMEINTHEWRAPUP by 25 cents a puzzle - your wish has been granted</li>
+               </ul>
+            </li>
+            <li><b>Divergent</b>
+                <ul>
+                    <li>IKNOWTHATYOUAREWATCHINGMESOIAMPERFECTLYFINEWITHWASTINGAGUESS by Useless Guys Only - 👀👀</li>
+                </ul>
+            </li>
+            <li><b>META: Percy Jackson</b>
+                <ul>
+                    <li>PIRSYMAGICTREEHOUSE by come back to us later and Useless Guys Only</li>
+                </ul>
+            </li>
+            <li><b>Matilda</b>
+                <ul>
+                    <li>(G/A)STRINGENT by multiple teams</li>
+                </ul>
+            </li>
+            <li><b>Frog and Toad</b>
+               <ul>
+                  <li>FLAGTEAM by many teams :(</li>
+               </ul>
+            </li>
+            <li><b>Ugly Duckling</b>
+                <ul>
+                    <li>NOTLIKEDUCK by Red Giselle - <img src="static/images/NotLikeDuck.png" style="height:3rem;vertical-align: bottom;"></li>
+                </ul>
+            </li>
+            <li><b>META: Jurassic Mark</b>
+            <p>
+               <a href="stats/jurassic-mark.html" target="_blank">Pretty much all of the wheel-of-fortune guesses were really funny to read as they were coming in</a>
+            </p>
+        </ul>
+        <br>
+        <h4 id="flags">Team Flags</h4>
+        <p>Here are (almost) all the flags submitted!</p>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRo2wzqvEwaxj5RMhY7PS24KbOycWMw4RBMj7J26C7OlT_k038cLGtuVrHjn0T_RxQkon6pdvG3kLgg/embed?start=false&amp;loop=true&amp;delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+   
+        <p><br><br>Anything else? Contact us at <a class="link-no">hunt20info@gmail.com</a></p>
+        <p>See you all (hopefully in <a class="link" href="https://2020.galacticpuzzlehunt.com/" target="_blank">GPH</a>!!),
+        <br>Hunt20 ❤️</p>
+    </div>
+    <button id="totop" onclick="location.href='wrapup.html#top'">☝️</button>
+
+</main>
+
+
+
+    </div>
+    
+</body>
+
+<!-- Mirrored from www.hunt20.com/wrapup by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Aug 2021 01:18:34 GMT -->
+</html>
