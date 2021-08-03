@@ -23,39 +23,23 @@ let answers = {
 
 function check(submit, puzzle) {
     let cleaned = submit.toUpperCase().replaceAll(/[^A-Z]+/g, "");
-    if(cleaned == ""){
+    if (cleaned == "") {
         return;
     }
-    if(puzzle == "fat"){
-        if ("0dcc950aabb1420b1b2c8c77c0b5297fbd0a8aa0" == hash(cleaned)) {
-            document.getElementById("special").hidden = false;
-            document.getElementById("unsolved").hidden = true;
-            document.getElementById("id_answer").value = "";
-            document.getElementById("solve-answer").innerHTML = cleaned;
-            
-        } 
-        else if (answers[puzzle] == hash(cleaned)) {
-            document.getElementById("solved").hidden = false;
-            document.getElementById("unsolved").hidden = true;
-            document.getElementById("id_answer").value = "";
-            document.getElementById("solve-answer").innerHTML = cleaned;
-            document.getElementById("guess").hidden = true;
-        }
-        else {
-            document.getElementById("solved").hidden = true;
-            document.getElementById("unsolved").hidden = false;
-            document.getElementById("id_answer").value = "";
-        }
-    }
-    else if (answers[puzzle] == hash(cleaned)) {
-        if(puzzle == "mjm"){
-            window.location.href="../victory.html";
+    if (answers[puzzle] == hash(cleaned)) {
+        if (puzzle == "mjm") {
+            window.location.href = "../victory.html";
         }
         document.getElementById("solved").hidden = false;
         document.getElementById("unsolved").hidden = true;
         document.getElementById("id_answer").value = "";
         document.getElementById("solve-answer").innerHTML = cleaned;
         document.getElementById("guess").hidden = true;
+    } else if (puzzle == "fat" && "0dcc950aabb1420b1b2c8c77c0b5297fbd0a8aa0" == hash(cleaned)) {
+        document.getElementById("special").hidden = false;
+        document.getElementById("unsolved").hidden = true;
+        document.getElementById("id_answer").value = "";
+        document.getElementById("solve-answer").innerHTML = cleaned;
     } else {
         document.getElementById("solved").hidden = true;
         document.getElementById("unsolved").hidden = false;
@@ -72,6 +56,7 @@ document.getElementById("id_answer").addEventListener("keyup", function (e) {
 
 function hash(msg) {
     msg = msg.toUpperCase().replaceAll(/[^A-Z]+/g, "");
+
     function rotate_left(n, s) {
         var t4 = (n << s) | (n >>> (32 - s));
         return t4;
