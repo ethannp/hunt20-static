@@ -1,5 +1,5 @@
 # Hunt20
-This site was originally a live Django app, created with [gph-site](https://github.com/galacticpuzzlehunt/gph-site). The original repository is kept private due to it containing private information.
+This site was originally a live Django app, created with [gph-site](https://github.com/galacticpuzzlehunt/gph-site). The original repository is kept private due to it containing private information, though if you would like to see it, please contact me. 
 
 ## Static mirror of hunt20
 
